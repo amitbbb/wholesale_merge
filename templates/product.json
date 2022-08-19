@@ -1,0 +1,764 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "a2b09f99-043b-415a-919d-8def93423e19": {
+          "type": "review",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "430f2b37-2fb5-4f3b-b53e-35515fbb57f6": {
+          "type": "subscription_text",
+          "settings": {
+            "heading": "MONTHLY SUBSCRIPTION BENEFITS",
+            "text": "<p>Free shipping for subscription orders over $25 (after discount applied)<\/p><p>Easy cancellation<\/p>"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "91841efe-7d3e-474c-b196-c509d50fbfd8": {
+          "type": "store_locator",
+          "settings": {
+            "store_locator": "FIND IN STORE",
+            "url": "https:\/\/shop.hylands.com\/",
+            "exclude": "baby-essentials|athlete-starter-kit|gummy-bundle|leg-trio"
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "a2b09f99-043b-415a-919d-8def93423e19",
+        "description",
+        "variant_picker",
+        "430f2b37-2fb5-4f3b-b53e-35515fbb57f6",
+        "quantity_selector",
+        "buy_buttons",
+        "91841efe-7d3e-474c-b196-c509d50fbfd8",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "badgeHandles": "baby-essentials|athlete-starter-kit|gummy-bundle|leg-trio",
+        "badgeText": "Sale"
+      }
+    },
+    "information-tabs": {
+      "type": "information-tabs",
+      "settings": {
+      }
+    },
+    "ingredient-tags": {
+      "type": "ingredient-tags",
+      "blocks": {
+        "ebadd26e-c2bf-464e-9aa3-e8510be9b8a9": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Lemon Balm",
+            "heading": "Lemon Balm",
+            "image": "shopify:\/\/shop_images\/p1.png",
+            "tag_details": "<p>The Lemon Balm is an ancient remedy that supports the body, mind, and spirit by relieving stress and brightening moods.<\/p>"
+          }
+        },
+        "9c8f577b-dfc3-4b55-9484-b0c8d895633a": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_L-Theanine",
+            "heading": "L-Theanine",
+            "tag_details": "<p>This amino acid found in the leaves of many teas eases stress, calms the mind, and helps maintain mental focus.<\/p>"
+          }
+        },
+        "150e9ad6-335b-4a5f-90f4-81f70613cb31": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Aconitum Napellus (Monks Hood, Wolfsbane)",
+            "heading": "Aconitum Napellus (Monks Hood, Wolfsbane)",
+            "tag_details": "<p>Wolfsbane is a tall plant with purple flowers with that is primarily used to calm fevers and alleviate restlessness and anxiety.<br\/><\/p>"
+          }
+        },
+        "008fd0a0-9bb1-4856-a701-56b758221d91": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Allium Cepa (Onion)",
+            "heading": "Allium Cepa (Onion)",
+            "tag_details": "<p>This common household vegetable is used as a therapeutic additive to help relieve runny noses, coughs, sore throats, hay fever, and watery, itchy eyes.<\/p>"
+          }
+        },
+        "705356d0-59d7-41e0-bb7e-e1a2f07ef13c": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Arnica Montana (Mountain Arnica Flower)",
+            "heading": "Arnica Montana (Mountain Arnica Flower)",
+            "image": "shopify:\/\/shop_images\/p1.png",
+            "tag_details": "<p>Mountain Arnica belongs to the daisy family and has been used for hundreds of years as a pain relief agent to ease muscle soreness and stiffness. <\/p>"
+          }
+        },
+        "9b109eda-0517-432c-94b2-7d0b9f60306f": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Bioplasma (Cell Salt Combination)",
+            "heading": "Bioplasma (Cell Salt Combination)",
+            "tag_details": "<p>Bioplasma contains a blend of all the cell salts, to provide natural balance and symptom relief to help strengthen your nervous system against colds, headaches, fatigue, and nervous tension. <\/p>"
+          }
+        },
+        "4c921cd8-bf8f-4bf1-9a97-3893425f4fbf": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Bryonia Alba (White Bryony)",
+            "heading": "Bryonia Alba (White Bryony)",
+            "tag_details": "<p>Bryonia Alba is a wild vine in the gourd family, used to provide relief from muscle and joint pain.<\/p>"
+          }
+        },
+        "151359cd-b786-466e-a142-bacdcf931912": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Calcium Flouride",
+            "heading": "Calcium Flouride (Calcarea Fluorica)",
+            "tag_details": "<p>Calcium Flouride is a mineral that supports the body's elasticity and is a favorite for providing relief from hemorrhoid symptoms, itching, irritation, and pain.<\/p>"
+          }
+        },
+        "4fad1c02-3cb7-401e-9863-80f2f9484aad": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Calcium Phosphate",
+            "heading": "Calcium Phosphate (Calcarea Phosphorica)",
+            "tag_details": "<p>Calcium Phosphate is a mineral that offers general support by strengthening and balancing the body's healing abilities.<\/p>"
+          }
+        },
+        "72016c40-1a22-4d58-9e62-4e7cd3144f7e": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Calcium Sulphate",
+            "heading": "Calcium Sulphate (Calcarea Sulphurica)",
+            "tag_details": "<p>Calcium Sulphate exists naturally in our bodies to minimize fluid and mucus accumulation. It provides relief from any discharge-related symptoms, from colds to pimples.<\/p>"
+          }
+        },
+        "0355ff61-6808-4ef9-9b1a-55236af06a32": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Calendula (Pot Marigold)",
+            "heading": "Calendula (Pot Marigold)",
+            "tag_details": "<p>Calendula is a golden flower from the daisy family, also known as the pot marigold, that is used to support the healing of minor skin irritations and abrasions. <\/p>"
+          }
+        },
+        "0f2e1285-1866-405a-b8a0-29efa68a6baf": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Carbo Vegetabilis (Vegetable Charcoal)",
+            "heading": "Carbo Vegetabilis (Vegetable Charcoal)",
+            "tag_details": "<p>This homeopathic preparation of activated charcoal is a natural remedy that relieves abdominal discomfort, such as constipation, stomach cramps, and nausea.<\/p>"
+          }
+        },
+        "772fb27a-b235-4757-b0bd-e2b6f0574214": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Chamomilla (Chamomille)",
+            "heading": "Chamomilla (Chamomile)",
+            "tag_details": "<p>Chamomilla is a small, daisy-like flower used medicinally since antiquity, that may support the healing of irritability, insomnia, restlessness, and colic pain.<\/p>"
+          }
+        },
+        "db360ce7-79d1-466e-b0ba-9613bf16f947": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Cinchona Officinalis",
+            "heading": "Cinchona Officinalis",
+            "tag_details": "<p>Cinchona Officinalis is a tree native to the rainforests of South America, and the homeopathic preparation of the bark is used to provide relief from pain and cramps.<\/p>"
+          }
+        },
+        "7ab905bf-8a0e-4260-8c9c-a6c1a73a6104": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Cocculus Indicus",
+            "heading": "Cocculus Indicus",
+            "tag_details": "<p>Cocculus Indicus is a berry vine native to India that is used to provide relief from anxiety, restlessness, and insomnia.<\/p>"
+          }
+        },
+        "cf1fc802-a502-4023-bb9c-e55863d3d143": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Drosera Rotundifolia (Sundew)",
+            "heading": "Drosera Rotundifolia (Sundew)",
+            "tag_details": "<p>Drosera Rotundifolia, also known as the sundew, is a carnivorous wildflower used to provide relief from barking cough.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "ebadd26e-c2bf-464e-9aa3-e8510be9b8a9",
+        "9c8f577b-dfc3-4b55-9484-b0c8d895633a",
+        "150e9ad6-335b-4a5f-90f4-81f70613cb31",
+        "008fd0a0-9bb1-4856-a701-56b758221d91",
+        "705356d0-59d7-41e0-bb7e-e1a2f07ef13c",
+        "9b109eda-0517-432c-94b2-7d0b9f60306f",
+        "4c921cd8-bf8f-4bf1-9a97-3893425f4fbf",
+        "151359cd-b786-466e-a142-bacdcf931912",
+        "4fad1c02-3cb7-401e-9863-80f2f9484aad",
+        "72016c40-1a22-4d58-9e62-4e7cd3144f7e",
+        "0355ff61-6808-4ef9-9b1a-55236af06a32",
+        "0f2e1285-1866-405a-b8a0-29efa68a6baf",
+        "772fb27a-b235-4757-b0bd-e2b6f0574214",
+        "db360ce7-79d1-466e-b0ba-9613bf16f947",
+        "7ab905bf-8a0e-4260-8c9c-a6c1a73a6104",
+        "cf1fc802-a502-4023-bb9c-e55863d3d143"
+      ],
+      "settings": {
+        "heading": "Key ingredients"
+      }
+    },
+    "ingredient-tags2": {
+      "type": "ingredient-tags2",
+      "blocks": {
+        "b8681e83-ffc8-4bb2-8817-2cd382933b44": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Eupatorium Perfoliatum (Boneset)",
+            "heading": "Eupatorium Perfoliatum (Boneset)",
+            "tag_details": "<p>Eupatorium Perfoliatum is a fluffy white flower used to provide relief from stiffness and pain caused by flu symptoms.<\/p>"
+          }
+        },
+        "d3245cf9-5643-4e5e-8e2b-129243c2c50e": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Euphrasia Officinalis (Eyebright)",
+            "heading": "Euphrasia Officinalis (Eyebright)",
+            "tag_details": "<p>Euphrasia Officinalis is a native European flowering herb, well-known for its use in relieving eye problems like strain, infections, and sensitivity.<\/p>"
+          }
+        },
+        "cef9cd2a-0aaf-49bc-b704-a1850685c699": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Ferrum Phosphoricum",
+            "heading": "Ferrum Phosphoricum",
+            "tag_details": "<p>Ferrum Phosphoricum is a natural mineral that is used to provide relief from fever and inflammation symptoms like swelling and redness.<\/p>"
+          }
+        },
+        "d5b8023b-53c8-4c76-a0c5-3aa704e9acb8": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Gelsemium Sempervirens (Yellow Jessamin)",
+            "heading": "Gelsemium Sempervirens (Yellow Jessamin)",
+            "tag_details": "<p>Gelsemium Sempervirens, or yellow jessamine, is a vine that blooms with bright yellow flowers and is well-known for treating symptoms of anxiousness.<\/p>"
+          }
+        },
+        "12056a35-86f2-459f-8a63-8a2fa047b590": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Humulus Lupulus (Hops)",
+            "heading": "Humulus Lupulus (Hops)",
+            "tag_details": "<p>This flowering plant belongs to the hemp family and is safely used to ease the mind, soothe nerves, and reduce general irritability. <\/p>"
+          }
+        },
+        "dd07b3ae-2ef9-4110-8d3e-18ebc86358aa": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Hydrastis (Goldenseal)",
+            "heading": "Hydrastis (Goldenseal)",
+            "tag_details": "<p>Hydrastis is a perennial herb that manages sinus pain & congestion and occasional sleeplessness. This plant can also heal coughs from mucus and dry or sore throats. <\/p>"
+          }
+        },
+        "0a2191a2-fee3-45a3-9529-0ad2023b1b01": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Hyoscyamus Niger (Henbane)",
+            "heading": "Hyoscyamus Niger (Henbane)",
+            "tag_details": "<p>Henbane is a dark flower that is used to relieve the symptoms of occasional sleeplessness derived from anxiety and wakefulness.<\/p>"
+          }
+        },
+        "eee8fd4c-c731-4d55-8abb-05a40442ba7a": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Ichthammol",
+            "heading": "Ichthammol",
+            "tag_details": "<p>Ichthammol is a skin relief topical that treats insect bites and stings, irritations, and minor skin infections.<\/p>"
+          }
+        },
+        "d71d1a16-68b1-452e-a2e4-53ff09b2c98f": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Ignatia Amara (St Ignatius Bean)",
+            "heading": "Ignatia Amara (St Ignatius Bean)",
+            "tag_details": "<p>St Ignatius Bean is a native plant found in the Philippines, that provides comfort and relief from nervousness and hypersensitivity due to general stress.<\/p>"
+          }
+        },
+        "b9a936e3-0988-4ff8-8572-cb733b635773": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Iris Versicolor (Blue Flag)",
+            "heading": "Iris Versicolor (Blue Flag)",
+            "tag_details": "<p>Commonly known as the Blue Flag iris, this flower relieves symptoms of migraines, which includes pounding or throbbing pain, dull or frontal headaches, light or noise sensitivity, nausea, dizziness, and blurred vision.<\/p>"
+          }
+        },
+        "36a0ffda-f00c-43e3-9959-b8c0c309f125": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Kali Muriaticum",
+            "heading": "Kali Muriaticum",
+            "tag_details": "<p>Kali Muriaticum clears mucus congestions and is known to help relieve colds, sore throats, runny noses, and mucus discharge. <\/p>"
+          }
+        },
+        "260c6b19-9abe-4973-8a56-6350c11a59fd": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Kali Phosphoricum",
+            "heading": "Kali Phosphoricum",
+            "tag_details": "<p>Known as the nerve nutrient cell salt, Kali Phosphoricum helps regulate pain signals and calms the body from stress, nervous tension, occasional sleeplessness, and headaches.<\/p>"
+          }
+        },
+        "3b133e68-8523-442d-8c90-69adcf0bdd06": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Kali Sulphuricum",
+            "heading": "Kali Sulphuricum",
+            "tag_details": "<p>Kali Sulphuricum provides comfort and relief from the common cold, yellow mucus discharge, as well as symptoms of pimples and blemishes associated with common acne.<\/p>"
+          }
+        },
+        "636ee003-cab0-41f9-b99b-eb40a558bbcd": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Lycopodium Clavatum (Princess Pine)",
+            "heading": "Lycopodium Clavatum (Princess Pine)",
+            "tag_details": "<p>Commonly referenced as the Princess Pine, this plant is widely used to remedy heartburn, nausea, and constipation.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "b8681e83-ffc8-4bb2-8817-2cd382933b44",
+        "d3245cf9-5643-4e5e-8e2b-129243c2c50e",
+        "cef9cd2a-0aaf-49bc-b704-a1850685c699",
+        "d5b8023b-53c8-4c76-a0c5-3aa704e9acb8",
+        "12056a35-86f2-459f-8a63-8a2fa047b590",
+        "dd07b3ae-2ef9-4110-8d3e-18ebc86358aa",
+        "0a2191a2-fee3-45a3-9529-0ad2023b1b01",
+        "eee8fd4c-c731-4d55-8abb-05a40442ba7a",
+        "d71d1a16-68b1-452e-a2e4-53ff09b2c98f",
+        "b9a936e3-0988-4ff8-8572-cb733b635773",
+        "36a0ffda-f00c-43e3-9959-b8c0c309f125",
+        "260c6b19-9abe-4973-8a56-6350c11a59fd",
+        "3b133e68-8523-442d-8c90-69adcf0bdd06",
+        "636ee003-cab0-41f9-b99b-eb40a558bbcd"
+      ],
+      "settings": {
+      }
+    },
+    "ingredient-tags3": {
+      "type": "ingredient-tags3",
+      "blocks": {
+        "ea818786-c7ba-4fd5-b75b-b619bf7f88d3": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Magnesia Phosphorica",
+            "heading": "Magnesia Phosphorica",
+            "tag_details": "<p>The Magnesia Phosphorica cell salt sooths diverse muscle & body cramps, soreness, tension, headaches, and radiating pain without any harmful or groggy side effects.<\/p>"
+          }
+        },
+        "985cea02-3dfd-4bd4-be1a-0d72e80d81a7": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Natrum Muriaticum (Sea Salt)",
+            "heading": "Natrum Muriaticum (Sea Salt)",
+            "tag_details": "<p>This water-distributing cell salt helps the body balance its fluids and relieves symptoms of headaches, colds, heartburn, as well as gastric upset and distress.<\/p>"
+          }
+        },
+        "fa679fee-5e90-4b5b-a2ca-da8cdafb7cbd": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Natrum Phosphoricum",
+            "heading": "Natrum Phosphoricum",
+            "tag_details": "<p>Natrum Phosphoricum is an essential cell salt that soothes symptoms of hyperacidity, indigestion, and gas by breaking down acids and restoring a natural balance.<\/p>"
+          }
+        },
+        "25c27792-7ca5-4e61-a3c7-eb48cfc4686f": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Natrum Sulph",
+            "heading": "Natrum Sulph",
+            "tag_details": "<p>This cell salt is known to provide relief from symptoms of the flu, such as rheumatic pains, nausea, and vomiting. <\/p>"
+          }
+        },
+        "efc61e97-1753-4cff-a62a-e499dd7da85b": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Organic Apple Cider Vinegar",
+            "heading": "Organic Apple Cider Vinegar",
+            "tag_details": "<p>The fermentation of apple cider vinegar is legendary when it comes to supporting a healthy digestive system, including metabolism, weight management, immune system and more.*<\/p>"
+          }
+        },
+        "37066e00-e43d-457f-b156-bea92b01a5ee": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Organic Black Elderberry",
+            "heading": "Organic Black Elderberry",
+            "tag_details": "<p>Sambucus Nigra, or Black Elderberry, is a botanical known for its dark purple berries, and used for generations to support healthy immune function. <\/p>"
+          }
+        },
+        "88e57e82-01f0-4dd2-97ba-f160c357433e": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Phosphorus",
+            "heading": "Phosphorus",
+            "tag_details": "<p>Phosphorous is a natural mineral that is essential in building strong, healthy bones, and can also be used to aid occasional sleeplessness and difficulty falling asleep due to stress.<\/p>"
+          }
+        },
+        "e037ffa2-901c-403f-bfae-b4682bf2cab2": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Pulsatilla (Wind Flower)",
+            "heading": "Pulsatilla (Wind Flower)",
+            "tag_details": "<p>Pulsatilla, known as the Wind Flower, is a Spring-blooming flower that helps aid fussiness and relieve coughs and stuffy noses by clearing up the accumulation of mucus.<\/p>"
+          }
+        },
+        "eb4b64f8-d76f-4f86-9c16-563ccc948cf1": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Rumex Crispus",
+            "heading": "Rumex Crispus",
+            "tag_details": "<p>Rumex Crispus, or curly dock, is part of the buckwheat family and is a remedy to sooth hacking, dry coughs.<\/p>"
+          }
+        },
+        "a8b30144-81a8-4a52-94c2-97985c7ebb9a": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Silicea",
+            "heading": "Silicea",
+            "tag_details": "<p>Silicea is a cleansing salt that helps the body eliminate non-functional matter and provides temporary relief of blemishes associated with common acne. It is also a great remedy to improve brittle hair and nails. <\/p>"
+          }
+        },
+        "5939e8a6-0e0a-43eb-b682-93d9b2341a80": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Spongia Tosta",
+            "heading": "Spongia Tosta",
+            "tag_details": "<p>Spongia Toasta works to relieve inflamed glands and respiratory issues by alleviating dry and barking coughs. <\/p>"
+          }
+        },
+        "fe6fed17-0e3b-487f-afcc-b31fa76e4f8e": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Staphysagria",
+            "heading": "Staphysagria",
+            "tag_details": "<p>Derived from a species of purple flowers, Staphysagria is used as a homeopathic treatment to soothe the adverse symptoms associated with stopping smoking. <\/p>"
+          }
+        },
+        "ed802088-bf3c-4f3b-bbab-0480efe51fc7": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Vitamin C",
+            "heading": "Vitamin C",
+            "tag_details": "<p>Vitamin C, also known as an immunity superstar, is here to support and strengthen various immune responses in the body.<\/p>"
+          }
+        },
+        "06a01370-bd4c-4111-bab9-8c0c1da62fc3": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Xerophyllum",
+            "heading": "Xerophyllum",
+            "tag_details": "<p>This cloud-like flower is an excellent remedy for easing itching, stinging, and burning skin irritations.<\/p>"
+          }
+        },
+        "68137a26-64f6-4771-b49f-fa8391c9f2b8": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Ingredients_Zinc",
+            "heading": "Zinc",
+            "tag_details": "<p>Zinc is a natural mineral that is essential for the development and functionality of immune cells.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "ea818786-c7ba-4fd5-b75b-b619bf7f88d3",
+        "985cea02-3dfd-4bd4-be1a-0d72e80d81a7",
+        "fa679fee-5e90-4b5b-a2ca-da8cdafb7cbd",
+        "25c27792-7ca5-4e61-a3c7-eb48cfc4686f",
+        "efc61e97-1753-4cff-a62a-e499dd7da85b",
+        "37066e00-e43d-457f-b156-bea92b01a5ee",
+        "88e57e82-01f0-4dd2-97ba-f160c357433e",
+        "e037ffa2-901c-403f-bfae-b4682bf2cab2",
+        "eb4b64f8-d76f-4f86-9c16-563ccc948cf1",
+        "a8b30144-81a8-4a52-94c2-97985c7ebb9a",
+        "5939e8a6-0e0a-43eb-b682-93d9b2341a80",
+        "fe6fed17-0e3b-487f-afcc-b31fa76e4f8e",
+        "ed802088-bf3c-4f3b-bbab-0480efe51fc7",
+        "06a01370-bd4c-4111-bab9-8c0c1da62fc3",
+        "68137a26-64f6-4771-b49f-fa8391c9f2b8"
+      ],
+      "settings": {
+      }
+    },
+    "tags-information": {
+      "type": "tags-information",
+      "blocks": {
+        "8dd98d2b-d0b9-4928-a687-73216fac096a": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Diet_Made in USA",
+            "heading": "Made in the USA",
+            "text_heading": "Made in the USA",
+            "tag_details": "<p>Our symptom-alleviating products are all domestically produced within the United States of America. By investing within local communities and businesses, we can be sure that fair labor is guaranteed. <\/p><p>Our natural ingredients are sourced globally and sustainably when possible. We stand with ethical practices and support production that is better for people and the environment.<\/p><p><\/p><p><em>Hover over each icon on the left to learn more about Hyland's promise.<\/em><\/p>"
+          }
+        },
+        "72925fc4-9c06-4b52-bcf8-db1c7df755b6": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Diet_Organic",
+            "heading": "Organic",
+            "text_heading": "Organic",
+            "tag_details": "<p>Here at Hyland's, we specialize in organic formulas that are completely free from harmful toxins. Made only with pure and quality ingredients, our organic products do not contain chemical preservatives, synthetic materials, or artificial components. We source natural herbs and minerals to help support your wellbeing.<\/p><p><\/p><p><em>Hover over each icon on the left to learn more about Hyland's promise.<\/em><\/p>"
+          }
+        },
+        "48584f4a-fb4b-4a85-906a-2b312ce551f2": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Diet_Vegetarian",
+            "heading": "Vegetarian",
+            "text_heading": "Vegetarian",
+            "tag_details": "<p>Hyland's remedies are always vegetarian-friendly. We only use healthy and nourishing ingredients from natural plant and mineral sources. Our essential products do not contain any ingredients or byproducts of animal cruelty.<\/p><p><\/p><p><em>Hover over each icon on the left to learn more about Hyland's promise.<\/em><\/p>"
+          }
+        },
+        "2ab5cc84-cebd-4fae-b39b-9c7f15f90c98": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Diet_Vegan",
+            "heading": "Vegan",
+            "text_heading": "Vegan",
+            "tag_details": "<p>We focus on safe and healthy formulas for all. Therefore, Hyland's gummies are 100% vegan, meaning you won't find any animal-sourced ingredients or derivatives. What you will find is clean, accessible, and quality supplements to support your healthy lifestyle. <\/p><p><\/p><p><em>Hover over each icon on the left to learn more about Hyland's promise.<\/em><\/p>"
+          }
+        },
+        "261f6690-814c-4f69-94d2-7bbe528ebb59": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Diet_Allergen Free",
+            "heading": "Allergen Free",
+            "text_heading": "Allergen Free",
+            "tag_details": "<p>All of Hyland's products are free from common allergens including milk proteins*, eggs, fish, shellfish, tree nuts, peanuts, wheat, and soybeans. We source our ingredients from around the world, and always with the highest standards. We craft our remedies with care and make sure to provide safe and healthy goods that supports every lifestyle and diet.<\/p><p><\/p><p><em>*No products contain any whey or casein milk proteins. Our tablets are made with Lactose NF, a sugar derived from milk. Our liquids may contain trace amounts of lactose.*<\/em><\/p><p><\/p><p><em>Hover over each icon on the left to learn more about Hyland's promise.<\/em><\/p>"
+          }
+        },
+        "df1a7b97-eeb1-436f-93c2-d14fc46b6809": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Diet_Cruelty Free",
+            "heading": "Cruelty Free",
+            "text_heading": "Cruelty Free",
+            "tag_details": "<p>In addition to providing the best natural remedies, we are also proud to say that Hyland's is 100% cruelty free. That means our products are not tested on animals nor are any being harmed during production. <\/p><p><\/p><p><em>Hover over each icon on the left to learn more about Hyland's promise.<\/em><\/p>"
+          }
+        },
+        "df6bf1e2-3cd1-43b5-ac82-1fde882e7395": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Diet_Easy Dissolve",
+            "heading": "Easy Dissolve",
+            "text_heading": "Easy Dissolve",
+            "tag_details": "<p>We care for the safety of our community and know that pills aren't always easy to swallow. That's why we make our tablets easily dissolvable for safe and comfortable ingestion. Our focus has always been to offer alternatives that are reliable, supportive, and accessible.<\/p><p><\/p><p><em>Hover over each icon on the left to learn more about Hyland's promise.<\/em><\/p>"
+          }
+        },
+        "68ce8d79-5fc4-4a93-82f5-56a5edce319d": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Diet_No Artificial Flavors or Dyes",
+            "heading": "No Artificial Flavors or Dyes",
+            "text_heading": "No Artificial Flavors or Dyes",
+            "tag_details": "<p>Hyland's believes in wellness starting with authentic, natural contents. Therefore, our products contain no artificial flavors or dyes. All flavors and colors are naturally occurring from our powerful ingredients.<\/p><p><\/p><p><em>Hover over each icon on the left to learn more about Hyland's promise.<\/em><\/p>"
+          }
+        },
+        "85e02fed-1d5e-423c-89be-814e6975ee46": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Diet_Gluten Free",
+            "heading": "Gluten Free",
+            "text_heading": "Gluten Free",
+            "tag_details": "<p>As well as being allergen-free, this product is also gluten-free, and is safe for anyone with gluten sensitivities. We do not use any wheat or gluten proteins in any product. <\/p><p><\/p><p><em>Hover over each icon on the left to learn more about Hyland's promise.<\/em><\/p>"
+          }
+        },
+        "1c4fda6c-5f39-4fa9-9779-c0dbda915bf5": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Diet_Paraben Free",
+            "heading": "Paraben Free",
+            "text_heading": "Paraben Free",
+            "tag_details": "<p>In the spirit of keeping our wellness products as clean as possible, the Hyland's range is paraben-free. We believe in the natural power of homeopathy so we don't add any synthetic preservatives to our formulas.<\/p><p><\/p><p><em>Hover over each icon on the left to learn more about Hyland's promise.<\/em><\/p>"
+          }
+        },
+        "f7214d3f-c5ed-4b0b-8190-ee27f8b7e523": {
+          "type": "tag-detsils",
+          "settings": {
+            "match_tag": "Diet_Alcohol Free",
+            "heading": "Alcohol Free",
+            "text_heading": "",
+            "tag_details": "<p>Alongside natural active ingredients, the formula is also alcohol free. Our pediatric cold and cough syrups are carefully created to be gentle and soothing in support of strong long-term health. Your family’s wellbeing is our priority and we are dedicated to providing safe and effective treatments.<\/p><p><\/p><p><em>Hover over each icon on the left to learn more about Hyland's promise.<\/em><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "8dd98d2b-d0b9-4928-a687-73216fac096a",
+        "72925fc4-9c06-4b52-bcf8-db1c7df755b6",
+        "48584f4a-fb4b-4a85-906a-2b312ce551f2",
+        "2ab5cc84-cebd-4fae-b39b-9c7f15f90c98",
+        "261f6690-814c-4f69-94d2-7bbe528ebb59",
+        "df1a7b97-eeb1-436f-93c2-d14fc46b6809",
+        "df6bf1e2-3cd1-43b5-ac82-1fde882e7395",
+        "68ce8d79-5fc4-4a93-82f5-56a5edce319d",
+        "85e02fed-1d5e-423c-89be-814e6975ee46",
+        "1c4fda6c-5f39-4fa9-9779-c0dbda915bf5",
+        "f7214d3f-c5ed-4b0b-8190-ee27f8b7e523"
+      ],
+      "settings": {
+        "heading": "Our promise"
+      }
+    },
+    "pdp-faq": {
+      "type": "pdp-faq",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "article-with-image": {
+      "type": "article-with-image",
+      "settings": {
+      }
+    },
+    "iwt-image-with-text": {
+      "type": "iwt-image-with-text",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "Recommended for you",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": true
+      }
+    },
+    "logo-list": {
+      "type": "logo-list",
+      "disabled": true,
+      "blocks": {
+        "ac344ebf-7c65-4653-9b7b-69ca228f0fb9": {
+          "type": "logo",
+          "settings": {
+            "url": "#"
+          }
+        },
+        "56c26977-7746-47e5-a30d-be35fe5d686b": {
+          "type": "logo",
+          "settings": {
+            "url": "#"
+          }
+        },
+        "c2ef2ebf-8fce-4bc2-b9f4-ea7f193938ad": {
+          "type": "logo",
+          "settings": {
+            "url": "#"
+          }
+        },
+        "afc1e886-210b-4450-a1e2-d695f79b8f6e": {
+          "type": "logo",
+          "settings": {
+            "url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "ac344ebf-7c65-4653-9b7b-69ca228f0fb9",
+        "56c26977-7746-47e5-a30d-be35fe5d686b",
+        "c2ef2ebf-8fce-4bc2-b9f4-ea7f193938ad",
+        "afc1e886-210b-4450-a1e2-d695f79b8f6e"
+      ],
+      "settings": {
+        "heading": "Find <span><\/span> near you",
+        "coupon_label": "$2 Off In-Store",
+        "coupon_head": "Save $2 at your favorite retailer"
+      }
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "disabled": true,
+      "settings": {
+        "heading": "Reviews"
+      }
+    },
+    "1634816721ad26a29d": {
+      "type": "apps",
+      "blocks": {
+        "4fd011f7-a71d-450b-826b-2a0574c6542b": {
+          "type": "shopify:\/\/apps\/advanced-product-descriptions\/blocks\/advanced-description\/cffc7d91-64c9-4f4d-88f8-8eb78b420747",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "4fd011f7-a71d-450b-826b-2a0574c6542b"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "information-tabs",
+    "ingredient-tags",
+    "ingredient-tags2",
+    "ingredient-tags3",
+    "tags-information",
+    "pdp-faq",
+    "article-with-image",
+    "iwt-image-with-text",
+    "product-recommendations",
+    "logo-list",
+    "product-reviews",
+    "1634816721ad26a29d"
+  ]
+}

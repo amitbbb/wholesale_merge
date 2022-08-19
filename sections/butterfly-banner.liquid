@@ -1,0 +1,156 @@
+<div id="section-{{ section.id }}" class="butterfly-page butterfly-banner-section">
+  <div class="bannerWrapper" style="background-image: url('{{ section.settings.bg_image | img_url: "master" }}');">
+    <video class="videoBg" src="https://cdn.shopify.com/s/files/1/1533/0491/files/butterflies.mp4?v=1653629257" preload="auto" loop autoplay muted playsinline>
+    </video>
+    {% comment %}
+    {% if section.settings.fly_image != blank %}
+    <img class="iconImg" src="{{ section.settings.fly_image | img_url: "master" }}" alt="{{ section.settings.fly_image.alt }}"/>
+    {% endif %}
+    {% endcomment %}
+    <div class="bannerContent">
+      {% if section.settings.heading != blank %}
+      <h1>{{ section.settings.heading }}</h1>
+      {% endif %}
+      {% if section.settings.sub_heading != blank %}
+      <p>{{ section.settings.sub_heading }}</p>
+      {% endif %}
+<!--       <form method="post" action="">
+        <div class="formGroup">
+        <input type="text" placeholder="Enter your code" class="inputText">
+          <input type="submit">
+        </div>
+      </form> -->
+      
+      <form action="POST" id="hylands-promo">
+        <div class="form-example">
+          <label for="code" style="margin-bottom:2rem;display:inline-block">Enter your promo code: </label>
+          <input type="text" name="code" id="code" placeholder="Enter your code" class="inputText" required>
+
+          <input type="hidden" name="shopify_user_id" id="shopify_user_id" value="{{customer.id}}">
+          <input type="hidden" name="user_email" id="user_email" value="{{customer.email}}">
+          <input type="hidden" name="user_firstname" id="user_firstname" value="{{customer.first_name}}">
+          <input type="hidden" name="user_lastname" id="user_lastname" value="{{customer.last_name}}">
+        </div>
+        <div class="form-example">
+           <input type="submit" value="Redeem!" class="hylands-promo-btn">
+        </div>
+      </form>
+      
+      <div id="hylands-promo-msg" style="margin-top:2rem;"></div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  .hylands-promo-btn {
+    margin-top: 2rem;
+    display: inline-block;
+    background-color: #1b4388;
+    color: white;
+    border: 1px solid #1b4388;
+    padding: 16px 65px;
+    font-size: 13px;
+    font-family: Gotham;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+  }
+</style>
+
+<script>
+  const form = document.getElementById("hylands-promo")
+    const msg = document.getElementById("hylands-promo-msg")
+    console.log(form)
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      // var payload = new FormData(event.target);
+      // console.log([...payload]);
+      // console.log(event.target.shopify_user_id.value);
+
+      if (event.target.shopify_user_id.value === "") {
+        msg.innerHTML = `<p>Please <a href="/account/login" style="text-decoration:underline!important">login</a> to redeem your code<p>`
+      } else {
+        const data = {
+          shopify_user_id: event.target.shopify_user_id.value,
+          user_email: event.target.user_email.value,
+          user_firstname: event.target.user_firstname.value,
+          user_lastname: event.target.user_lastname.value,
+          code: event.target.code.value.toUpperCase(),
+        }
+
+        console.log("data", data)
+
+
+        fetch('https://darm22cqu3gdxmebjehpxwocc40gnosu.lambda-url.us-west-1.on.aws/', {
+          method: 'POST',
+          httpMethod: "POST",
+          // mode: 'no-cors',
+          headers: {
+            // "Accept": 'application/json',
+            "Content-Type": "application/json",
+            // "Access-Control-Allow-Origin": "*"
+          },
+          // body: JSON.stringify(payload),
+          body: JSON.stringify(data)
+        })
+          .then(function (response) {
+            if (response.ok) {
+              // console.log(response.json())
+              return response.json();
+            }
+            if (response.status === 502) {
+              return {
+                body: "Your code is invalid"
+              }
+            }
+
+            return Promise.reject(response.status);
+            // return response;
+          })
+          .then(function (data) {
+            console.log("data", data);
+            msg.textContent = data.body
+          })
+          .catch(function (error) {
+            console.warn(error);
+          });
+      }
+    })
+</script>
+{% schema %}
+  {
+    "name": "Butterfly Banner",
+    "settings": [
+		{
+			"type": "image_picker",
+			"id": "bg_image",
+			"label": "Backgrond Image"
+		},
+		{
+			"type": "image_picker",
+			"id": "fly_image",
+			"label": "Butterfly Image"
+		},
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Heading",
+			"default": "Find a unique code on the Butterfly Origami included with your order."
+		},
+		{
+			"type": "text",
+			"id": "sub_heading",
+			"label": "Sub Heading",
+			"default": "Enter code below for great rewards."
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,169 @@
+<div class="tags-block">
+  <div class="tags-block-wrap">
+    <div class="tags-boxes">
+      {% if section.settings.heading != blank %}
+      <h3>{{ section.settings.heading }}</h3>
+      {% endif %}
+      {% assign counter = 1 %}
+      {% for block in section.blocks %}
+        {% assign matchTag = block.settings.match_tag | downcase %}
+        {% assign counter = forloop.index %}
+    	{% for tag in product.tags %}
+    	{% assign pTag = tag | downcase %}
+    	{% if pTag == matchTag %}
+      <div class="tag-box tag-box-{{ counter }} tag-{{ pTag | replace:' ', '-' }} {% if counter == 1 %}active{% endif %}" data-tag="tag-{{ pTag | replace:' ', '-' }}" data-seq="{{ counter }}">
+        <img class="placeholder-image" src="{{'Placeholder-250x150.png' | asset_url}}">
+        <div class="tag-inner">
+          <div class="tag-icon-wrap">
+            {% if block.settings.icon != blank %}
+              <img src="{{ block.settings.icon | img_url: '150x' }}" class="tag-icon__img"  alt="">
+            {% else %}
+              {% include 'icon-cart' %}
+            {% endif %}
+            {% if block.settings.heading == blank %}
+            <span>{{ tag }}</span>
+            {% else %}
+            <span>{{ block.settings.heading }}</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% assign counter = counter | plus: 1 %}
+      {% endif %}
+      {% endfor %}
+      {% endfor %}
+    </div>
+    <div class="tags-content">
+      <ul class="tag-info">
+      {% for block in section.blocks %}
+        {% assign matchTag = block.settings.match_tag | downcase %}
+    	{% for tag in product.tags %}
+    	{% assign pTag = tag | downcase %}
+    	{% if pTag == matchTag %}
+        <li class="tag-content tag-{{ matchTag | replace: ' ', '-' }}">
+          {% if block.settings.text_heading != blank %}
+          <h3>{{ block.settings.text_heading }}</h3>
+          {% endif %}
+          {% if block.settings.tag_details != blank %}
+          <div class="tag-text">
+            {{ block.settings.tag_details }}
+          </div>
+          {% endif %}
+        </li>
+        {% endif %}
+        {% endfor %}
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Tags Information",
+  	"tag": "section",
+    "class": "tag-section",
+    "settings": [
+      {
+      	"type": "text",
+      	"id": "heading",
+      	"label": "Section Heading"
+      }
+	],
+	"blocks": [
+      {
+        "type": "tag-detsils",
+        "name": "Tag Details",
+        "settings": [
+          {
+             "type": "text",
+             "id": "match_tag",
+             "label": "Tag match with",
+			        "info": "Enter a tag name to match with details"
+          },
+          {
+             "type": "text",
+             "id": "heading",
+             "label": "Icon Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Select your icon"
+          },
+		      {
+             "type": "text",
+             "id": "text_heading",
+             "label": "Heading"
+          },
+		      {
+             "type": "richtext",
+             "id": "tag_details",
+             "label": "Tag details"
+          }
+        ]
+      }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+$(function(){
+	if($(".tag-box").length < 1) {
+		$(".tag-section").css({"display":"none"});
+	}
+	else {
+      var curTag = $(".tag-box.active").data("tag");
+      $(".tag-content."+curTag).addClass("active");
+      $("body").on("mouseenter", ".tag-box", function(){
+          var _this = $(this);
+          $(".tag-box").removeClass("active");
+          $(this).addClass("active");
+          $(".tag-content").removeClass("active");
+          $(".tag-content."+$(this).data('tag')).addClass("active");
+          console.log($(this).index());
+          var ind = $(this).data("seq");
+          if($(window).width() < 750 ) {
+              if(ind % 2 == 0) {
+                  console.log("append next");
+                  $(".tags-content").insertAfter($(this));
+              }
+              else {
+                  console.log("append next next");
+                  $(".tags-content").insertAfter($(this).next());
+              }                     
+          }
+      });
+	}
+});
+
+$(window).on("load resize", function(){
+  if($(window).width() < 750 ) {
+	if($(".tags-block-wrap >.tags-content").length > 0) {
+		var ind = $(".tag-box.active").data("seq");
+		console.log(ind);
+		if(ind % 2 == 0) {
+			$(".tags-content").insertAfter(".tag-box-"+ind);
+		}
+		else {
+			if($(".tag-box-"+(ind + 1)).length > 0) {
+				$(".tags-content").insertAfter(".tag-box-"+(ind + 1));
+			}
+			else {
+				$(".tags-content").insertAfter(".tag-box-"+ind);
+			}
+
+		}
+	}
+  }
+  else {
+    if($(".tags-boxes >.tags-content").length > 0) {
+		$(".tags-content").insertAfter(".tags-boxes");
+	}
+  }
+
+});
+{% endjavascript %}

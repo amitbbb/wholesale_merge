@@ -1,0 +1,132 @@
+<div class="customfield-tabs">
+  <div class="tabsWrapper"></div>
+  
+  <div class="contentWrapper">
+    
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Information Tabs",
+  	"tag": "section",
+  	"class": "information-tabs",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+
+$(function(){
+	var isWhereToBuy = false;
+	var count = 0;
+  if($(".apd-acc-section").length > 0 ) {
+    $(".apd-acc-section").each(function(){
+      if($.trim($(this).find("h1").text().toLowerCase()) == "tabs") {
+          count = 1;
+          $($(this).find("ul").appendTo(".tabsWrapper"));
+
+          $(this).find("table tr").each(function(){
+            var len = $(this).children("td").length;
+            var html = `<div class="tab-info-wrap">`;
+            $(this).children("td").each(function(){
+            if($.trim($(this).html()) != "" && $.trim($(this).html()) != "&nbsp;") {
+                var tdHtml = $(this).html();
+                html += `<div class="col-${len}">${tdHtml}</div>`;
+            }
+            else {
+                len = len - 1;
+            }
+            });
+            html += `</div>`;
+            $(".contentWrapper").append(html);
+          });
+          $(".tabsWrapper ul li:eq(0)").addClass("active");
+          $(".contentWrapper .tab-info-wrap:eq(0)").addClass("active");
+		
+		}
+		if($.trim($(this).find("h1").text().toLowerCase()) == "details") {
+		var desc = $(this).find(".apd-acc-content").html();
+		var html = `<div class='descriptionWrap'>${desc}</div>`; 
+			$(".product__description").html(html);
+			if($(".descriptionWrap").height() > 100) {
+				$("<span class='readMoreDesc'>Read More</span>").insertAfter(".descriptionWrap");
+			}
+		}
+      if($.trim($(this).find("h1").text().toLowerCase()) == "where to buy") {
+		isWhereToBuy = true;
+		var isImg = false;
+		var html = ``;
+	
+			if($(this).find("table img").length > 0){
+				isImg = true;
+			}
+			else{
+      			$(".logo-list-wrapper").hide();
+             }
+                $(this).find("table tr").each(function(){
+                   var td1 = $(this).children("td:eq(0)").children().attr("href");
+				   var td2 = $(this).children("td:eq(1)").find("img").attr("src");
+				html += `<a href="${td1}">
+					<figure><img src="${td2}"></figure></a>`;
+                });
+		$(".logos").append(html);
+      }	
+      if($.trim($(this).find("h1").text().toLowerCase()) == "faq accordion") {
+		$(".faq-accordion").prepend($(this).find("h3"));
+		//$(this).find(".apd-content.apd-acc-content").appendTo(".acc-wrapper"); 
+		 var html = `<ul>`;
+		  $(this).find("tbody tr").each(function(){
+			var heading = $(this).children("td:eq(0)").text();
+			var text = $(this).children("td:eq(1)").text();
+				html += `<li><h3>${heading}</h3><div class="faq-answer">${text}</div></li>`;
+			});
+			$(".acc-wrapper").html(html);
+      }
+      if($.trim($(this).find("h1").text().toLowerCase()) == "article with image") {
+		$(".left-side .content-wrapper").html($(this).find("tbody tr td:eq(0)").html());
+		$(".right-side .right-slider").html($(this).find("tbody tr td:eq(1)").html());
+			
+        
+		//$(this).find("tbody tr td:eq(0)").appendTo(".left-side");
+		//$(this).find("tbody tr td:eq(1)").appendTo(".right-side");
+		
+      } 
+
+    });
+	if(!isWhereToBuy) {
+		$(".logo-list-wrapper").hide(); 
+	}
+	
+  }
+  if(count == 0) {
+  	$(".information-tabs").css({"display":"none"});
+  }
+ 
+  if($(".descriptionWrap").height() > 100) {
+	$(".descriptionWrap").addClass("fixHeight");
+  }
+
+});
+$("body").on("click", ".readMoreDesc", function(){
+	if($(".descriptionWrap").hasClass("fixHeight")) {
+      $(".descriptionWrap").removeClass("fixHeight");
+      $(".readMoreDesc").text("Read Less");
+	}
+	else {
+      $(".descriptionWrap").addClass("fixHeight");
+      $(".readMoreDesc").text("Read More");
+	}
+
+});
+$("body").on("click", ".tabsWrapper ul li", function(){
+	$(".tabsWrapper ul li").removeClass("active");
+	$(this).addClass("active");
+	$(".contentWrapper .tab-info-wrap").removeClass("active");
+	$(".contentWrapper .tab-info-wrap:eq("+$(this).index()+")").addClass("active");
+});
+
+{% endjavascript %}

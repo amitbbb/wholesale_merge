@@ -1,0 +1,79 @@
+<div class="cell-customer">
+ 
+    <div class="cell-customer_heading">
+        {% if section.settings.heading != blank%}
+        <h2>{{ section.settings.heading }}</h2>
+        {% endif %}
+    </div>
+
+    <div class="cell_customer_inner">
+        {% for block in section.blocks %}
+        {% if block.settings.name != blank %}
+        <div class="box">
+            <h3>{{ block.settings.name }}</h3>
+            <img src="{{block.settings.img | img_url: 'original'}}">
+            <div class="customer_quote">
+                {{ block.settings.text }}
+            </div>
+            <div class="description_box">
+                {{ block.settings.mainname }}
+            </div>
+        </div>
+
+        {% endif %}
+        {% endfor %}
+
+    </div>
+
+
+</div>
+</div>
+
+
+{% schema %}
+{
+"name": "Cell salt customer",
+"tag": "section",
+"class": "spaced-section",
+"settings": [
+{
+"type": "text",
+"id": "heading",
+"label": "Heading"
+}
+],
+"blocks": [
+{
+"type": "customer",
+"name":"customer",
+"settings": [
+{
+"type": "text",
+"id": "name",
+"label": "Heading"
+},
+{
+"type": "image_picker",
+"id": "img",
+"label": "Star Rating"
+},
+{
+"type": "richtext",
+"id": "text",
+"label": "Quote"
+},
+{
+"type": "richtext",
+"id": "mainname",
+"label": "name"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Cell salt customer"
+}
+]
+}
+{% endschema %}

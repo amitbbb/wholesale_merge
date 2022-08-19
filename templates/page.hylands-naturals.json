@@ -1,0 +1,27 @@
+{
+  "wrapper": "div.hylands-naturals-templete",
+  "sections": {
+    "main": {
+      "type": "hylands-naturals",
+      "settings": {
+        "sec_head": "Why Hyland's Naturals?",
+        "center_img": "shopify:\/\/shop_images\/4_c422ccde-f2cf-4477-b58a-8986c030a063.png",
+        "head1": "TRUSTED BY MILLIONS",
+        "text1": "Millions have trusted their wellness to Hyland's. We've been around since 1903!",
+        "head2": "NATURAL INGREDIENTS",
+        "text2": "We scour the earth to bring you plant-based ingredients that are safe, effective, and cruelty-free.",
+        "head3": "NO YUCKY STUFF",
+        "text3": "Our products are paraben-free and made without artificial flavors or dyes.",
+        "head4": "MADE IN THE USA",
+        "text4": "Our products are formulated and manufactured in state-of-the-art cGMP facilities in the USA.",
+        "head5": "ALLERGEN-FREE",
+        "text5": "Our products are free of top allergens, including peanuts, tree nuts, soy, wheat, milk proteins, eggs, fish or shellfish.",
+        "head6": "TASTE YOU'LL LOVE",
+        "text6": "Yummy gummies, great-tasting liquid flavors, and easy-dissolve tablets make taking care of yourself & your kids easy."
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

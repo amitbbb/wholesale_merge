@@ -1,0 +1,18 @@
+{
+  "wrapper": "div.shipping-return-templete",
+  "sections": {
+    "main": {
+      "type": "shipping-return-policy",
+      "settings": {
+        "heading": "Shipping & Return<br>Policy",
+        "ship_head": "Shipping",
+        "ship_text": "<p>Orders of $35 or more are eligible for free Standard Shipping. Orders are not processed on Saturday, Sunday, or national holidays.<\/p>",
+        "return_head": "Return Policy",
+        "return_text": "<p>We know your Hyland’s products are important to you and your family, so if there’s an issue with your order, we have you covered! Please get in touch with our Customer Care Team, and they will happily assist you. Please send us an email at care@hylands.com.<br\/><br\/>Please note, we will send a replacement for any damaged goods, not issue a refund. All requests need authorization by our Customer Care team and returns must be postmarked within 30 days of delivery.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

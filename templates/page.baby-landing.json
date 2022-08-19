@@ -1,0 +1,209 @@
+{
+  "wrapper": "div.baby-landing-templete",
+  "sections": {
+    "1659438980c42a214f": {
+      "type": "landing-header-tabs",
+      "blocks": {
+        "30cc980b-a73f-4006-995e-ef4d1bd7e594": {
+          "type": "tabs",
+          "settings": {
+            "tab_text": "COLD &amp; COUGH",
+            "tab_url": "https:\/\/shop.hylands.com\/collections\/babies-cold-cough"
+          }
+        },
+        "4b9f0720-6197-423f-a40a-42994f6e1e22": {
+          "type": "tabs",
+          "settings": {
+            "tab_text": "TEETHING",
+            "tab_url": "https:\/\/shop.hylands.com\/collections\/babies-oral-pain"
+          }
+        },
+        "475df642-d208-42f3-a67d-c53c7a55aaa0": {
+          "type": "tabs",
+          "settings": {
+            "tab_text": "ALL BABY PRODUCTS",
+            "tab_url": "https:\/\/shop.hylands.com\/collections\/hylands-baby"
+          }
+        }
+      },
+      "block_order": [
+        "30cc980b-a73f-4006-995e-ef4d1bd7e594",
+        "4b9f0720-6197-423f-a40a-42994f6e1e22",
+        "475df642-d208-42f3-a67d-c53c7a55aaa0"
+      ],
+      "settings": {
+        "sec_head": "Hyland’s Baby"
+      }
+    },
+    "main": {
+      "type": "hero-banner",
+      "settings": {
+        "hero_img": "shopify:\/\/shop_images\/kids_banner.png",
+        "hero_heading": "Soothe your baby with natural relief",
+        "hero_sub_heading": "Make their morning and bedtime routines much more pleasant with gentle natural ingredients.",
+        "hero_button": "SHOP PRODUCTS",
+        "hero_btn_url": "https:\/\/shop.hylands.com\/collections\/hylands-baby",
+        "hero_btn_color": "#1b4388",
+        "hero_btn_h_color": "#ffffff"
+      }
+    },
+    "165936135512e88c74": {
+      "type": "products-slider",
+      "blocks": {
+        "495a5cc3-4f83-4f57-8061-c7da9947a08d": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "product_item": "hylands-baby-oral-pain-relief"
+          }
+        },
+        "8d0488e2-9f9f-4b64-9b03-d0a3da3e305f": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "product_item": "hylands-baby-mucus-plus-cold-relief"
+          }
+        },
+        "a2692820-1eea-451d-a084-36881c78e2bf": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "product_item": "hylands-baby-cough-syrup"
+          }
+        },
+        "5b4a8995-7f3d-4588-ba82-fc875ac24d69": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "product_item": "hylands-baby-nighttime-oral-pain-relief"
+          }
+        },
+        "2a21cbd2-a98c-4bb2-835e-0fa1f10598f6": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "product_item": "hylands-baby-tiny-cold-tablets"
+          }
+        },
+        "85d2c2eb-487d-4977-b6e7-22072e49124c": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "product_item": "hylands-baby-mucus-plus-cold-relief-day-and-night-value-pack"
+          }
+        }
+      },
+      "block_order": [
+        "495a5cc3-4f83-4f57-8061-c7da9947a08d",
+        "8d0488e2-9f9f-4b64-9b03-d0a3da3e305f",
+        "a2692820-1eea-451d-a084-36881c78e2bf",
+        "5b4a8995-7f3d-4588-ba82-fc875ac24d69",
+        "2a21cbd2-a98c-4bb2-835e-0fa1f10598f6",
+        "85d2c2eb-487d-4977-b6e7-22072e49124c"
+      ],
+      "settings": {
+        "main_head": "Shop parent-approved picks",
+        "main_subhead": "Keep your baby happy and healthy with our natural products that provide safe relief.",
+        "shop_all": "Shop All",
+        "shop_all_url": "https:\/\/hylands.com\/collections\/hylands-baby"
+      }
+    },
+    "1659421009c5d6946c": {
+      "type": "two-column-collection",
+      "blocks": {
+        "7e6c0d40-c0c3-4ba8-b975-1ac5173ef2dd": {
+          "type": "card",
+          "settings": {
+            "bg_img": "shopify:\/\/shop_images\/bby.png",
+            "block_heading": "Hyland’s Baby Cold &amp; Cough",
+            "btn_label": "SHOP NOW",
+            "btn_url": "https:\/\/hylands.com\/collections\/babies-cold-cough"
+          }
+        },
+        "e93c2853-f868-409d-916d-5818702c73b7": {
+          "type": "card",
+          "settings": {
+            "bg_img": "shopify:\/\/shop_images\/bby2.png",
+            "block_heading": "Hyland’s Baby Teething",
+            "btn_label": "SHOP NOW",
+            "btn_url": "https:\/\/hylands.com\/collections\/babies-oral-pain"
+          }
+        }
+      },
+      "block_order": [
+        "7e6c0d40-c0c3-4ba8-b975-1ac5173ef2dd",
+        "e93c2853-f868-409d-916d-5818702c73b7"
+      ],
+      "settings": {
+        "center_img": "shopify:\/\/shop_images\/lte.png",
+        "sec_head": "Keep their relief within reach"
+      }
+    },
+    "1659422195f33e7147": {
+      "type": "four-products-side-image",
+      "blocks": {
+        "da2c56a0-e2ad-4f1f-a287-98ffe61a65a1": {
+          "type": "card",
+          "settings": {
+            "product_item": "hylands-baby-nighttime-oral-pain-relief"
+          }
+        },
+        "a0ba417e-f01f-4d02-9f89-9f08a4bd19d0": {
+          "type": "card",
+          "settings": {
+            "product_item": "hylands-baby-calming-tablets"
+          }
+        },
+        "e98cf2ee-48d8-427d-b49d-13297a9b481b": {
+          "type": "card",
+          "settings": {
+            "product_item": "hylands-baby-nighttime-mucus-plus-cold-relief"
+          }
+        },
+        "a08d6329-43ba-40de-b33f-0f3624917198": {
+          "type": "card",
+          "settings": {
+            "product_item": "hylands-baby-nighttime-tiny-cold-tablets"
+          }
+        }
+      },
+      "block_order": [
+        "da2c56a0-e2ad-4f1f-a287-98ffe61a65a1",
+        "a0ba417e-f01f-4d02-9f89-9f08a4bd19d0",
+        "e98cf2ee-48d8-427d-b49d-13297a9b481b",
+        "a08d6329-43ba-40de-b33f-0f3624917198"
+      ],
+      "settings": {
+        "main_head": "Shop nighttime options for babies",
+        "main_subhead": "",
+        "cartoon_img": "shopify:\/\/shop_images\/yellobird.png",
+        "left_img": "shopify:\/\/shop_images\/bby-side.png",
+        "sec_head": "Hyland's Calming and Soothing",
+        "sec_subhead": "Help your little ones find comfort and relief with Hyland's natural products.",
+        "shop_all": "SHOP ALL",
+        "shop_all_url": "https:\/\/shop.hylands.com\/collections\/hylands-baby"
+      }
+    },
+    "1659423928c34486d4": {
+      "type": "image-text-section",
+      "settings": {
+        "badges": "HEY MOMMA",
+        "cartoon": "shopify:\/\/shop_images\/Butterfly.png",
+        "main_head": "A little something for Moms",
+        "bodycopy": "<p>Your mind and body deserve to feel their best, which is why for over 120 years, we've worked hard to create effective natural remedies appropriate for all bodies. We believe everyone should feel alive, radiant, and pain-free; a belief that has inspired us to spread the love by supporting your wellness journey.<\/p>",
+        "shop_all": "SHOP PRODUCTS",
+        "shop_all_url": "https:\/\/shop.hylands.com\/collections\/stress-sleep",
+        "right_img": "shopify:\/\/shop_images\/bbyright.png",
+        "cartoon1": "shopify:\/\/shop_images\/btrfly2_f5425ef0-dfc4-472f-be34-b00126bf30a7.png"
+      }
+    }
+  },
+  "order": [
+    "1659438980c42a214f",
+    "main",
+    "165936135512e88c74",
+    "1659421009c5d6946c",
+    "1659422195f33e7147",
+    "1659423928c34486d4"
+  ]
+}

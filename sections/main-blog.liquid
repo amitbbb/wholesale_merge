@@ -1,0 +1,196 @@
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+
+
+{%- paginate blog.articles by 7 -%}
+
+  <div class="main-blog">
+   <div class="header-main-div" style=""> 
+     {% if blog.handle == "hylands-powered" %}
+     <h1 class="title--primary">Hyland's Community</h1>
+     {% else %}
+     <h1 class="title--primary">{{ blog.title | escape }}</h1>
+    {% endif %}
+           <div class="menu-div-custom" style="">
+        {% for link in linklists.blog-menu.links %}
+             
+               <a class="lable-log-menu-custom" href= "{{ link.url }}">{{ link.title }}</a>
+             
+        {% endfor %}
+
+    </div>
+    {% assign cur_tag = '' %}
+     <div class="filter-div custom">
+      <span class="filt">Show filters</span><img class="bnb" src="https://cdn.shopify.com/s/files/1/1533/0491/files/filter.png?v=1634882527">
+       <select id="BlogTagFilter">
+       
+          <option id="go_all" value="{{ shop.url }}{{ blog.url }}" selected>All</option>
+          {%- for tag in blog.all_tags -%}
+          {% if current_tags contains tag %}
+         	{% assign cur_tag = tag %}
+          <option value="{{ shop.url }}{{ blog.url }}/tagged/{{ tag | handle }}" selected>{{ tag }}</option>
+          {% else %}
+          <option value="{{ shop.url }}{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</option>
+          {% endif %}
+          {%- endfor -%}
+       </select>
+          <svg class="arrow-blue" viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+            </path>
+       	  </svg>
+     </div>
+     
+     
+    <div class="filter-wrapper">
+      {%comment%}
+     <div class="show-filter">Show Filter</div>
+     <label class="facet-filters__label caption-large" for="SortBy">{%comment%}{{ 'products.facets.sort_by_label' | t }}{%endcomment%}<img src="{{'Filter.svg' | asset_url}}"></label>
+      {%endcomment%}
+     <div class="select-box">
+       <span class="sel-text">{% if cur_tag != blank %}{{cur_tag}} {% else %} All {% endif %}</span>
+       <img class="down-arrow-svg" src="https://cdn.shopify.com/s/files/1/1533/0491/t/59/assets/left-arrow1.svg?v=1638765201">
+       <div class="select-wrapper">
+         <ul class="custom-select in-blog">
+           {%- for tag in blog.all_tags -%}
+           	<li data-value="{{ shop.url }}{{ blog.url }}/tagged/{{ tag | handle }}" selected><span>{{ tag }}</span></li>
+           {%- endfor -%}
+         </ul>
+       </div>
+     </div>
+    </div>
+     
+     
+   </div>
+
+    <div class="blog-articleslog-articles--collage">
+      {%- for article in blog.articles -%}
+      
+      {% if forloop.index == 5 %}
+      
+      <div class="promation-custom">
+         <div class="promo-btn">
+           <h2 class="promation-head">{{blog.metafields.promo_sec.promo_head}}</h2>
+           <a href="{{blog.metafields.promo_sec.promo_btn_url}}" class="promation-btn btn-light">{{blog.metafields.promo_sec.promo_btn_text}}</a>
+         </div>
+        <img src="{{blog.metafields.promo_sec.promo_img}}">
+      </div>
+      {% endif %}
+        <div class="blog-articles__article article">
+          {%- render 'article-card', article: article, image_height: section.settings.image_height, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if paginate.pages > 1 -%}
+      {%- render 'pagination', paginate: paginate -%}
+    {%- endif -%}
+  </div>
+
+<a  target="_blank" href="https://www.instagram.com/hylandshealth/"><marquee id="insta-tags" width="100%" direction="left" scrollamount="4">
+   
+Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   —
+Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth
+Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth
+Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth
+Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth
+Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth
+Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth
+Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth
+Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth
+Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth
+Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth
+Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth   •   Follow us on Instagram @HylandsHealth
+  </marquee></a>
+<div class="insta-section-custom">
+  <div id="insta-feed"></div>
+</div>
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "t:sections.main-blog.name",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.main-blog.settings.header.content"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "grid",
+          "label": "t:sections.main-blog.settings.layout.options__1.label"
+        },
+        {
+          "value": "collage",
+          "label": "t:sections.main-blog.settings.layout.options__2.label"
+        }
+      ],
+      "default": "collage",
+      "label": "t:sections.main-blog.settings.layout.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image",
+      "default": true,
+      "label": "t:sections.main-blog.settings.show_image.label"
+    },
+    {
+      "type": "select",
+      "id": "image_height",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.main-blog.settings.image_height.options__1.label"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.main-blog.settings.image_height.options__2.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.main-blog.settings.image_height.options__3.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.main-blog.settings.image_height.options__4.label"
+        }
+      ],
+      "default": "medium",
+      "label": "t:sections.main-blog.settings.image_height.label",
+      "info": "t:sections.main-blog.settings.image_height.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "default": true,
+      "label": "t:sections.main-blog.settings.show_date.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "default": false,
+      "label": "t:sections.main-blog.settings.show_author.label"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-blog.settings.paragraph.content"
+    }
+  ]
+}
+{% endschema %}
+<script>
+          $(function(){
+          $('#BlogTagFilter').on('change', function () {
+          var url = $(this).val(); // get selected value
+          if (url) { // require a URL
+          window.location = url; // redirect
+          }
+          return false;
+          });
+          });
+          </script>

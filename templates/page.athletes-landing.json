@@ -1,0 +1,177 @@
+{
+  "wrapper": "div.athletes-landing-templete",
+  "sections": {
+    "main": {
+      "type": "hero-banner",
+      "settings": {
+        "hero_img": "shopify:\/\/shop_images\/banner_669fdd05-d652-42e5-9dce-86c653f15ae7.png",
+        "hero_heading": "Hit your new personal bests",
+        "hero_sub_heading": "Keep moving with natural relief for every step of your fitness journey and beyond.",
+        "hero_button": "SHOP PRODUCTS",
+        "hero_btn_url": "https:\/\/shop.hylands.com\/collections\/athletes",
+        "hero_btn_color": "#fff",
+        "hero_btn_h_color": "#1b4388"
+      }
+    },
+    "1659531933532a0845": {
+      "type": "four-landing-pages",
+      "blocks": {
+        "73e8b8ad-516f-40aa-86c6-35b585158b1a": {
+          "type": "card",
+          "settings": {
+            "prod_img": "shopify:\/\/shop_images\/2-1_f56fa8f4-19ac-4335-ab10-d61ce68534a8.png",
+            "btn_label": "PAIN",
+            "btn_url": "https:\/\/shop.hylands.com\/collections\/pain"
+          }
+        },
+        "b4d8a235-07fe-422c-836a-a95ecc1bbc1c": {
+          "type": "card",
+          "settings": {
+            "prod_img": "shopify:\/\/shop_images\/2-2.png",
+            "btn_label": "Recovery",
+            "btn_url": "https:\/\/shop.hylands.com\/collections\/pain"
+          }
+        }
+      },
+      "block_order": [
+        "73e8b8ad-516f-40aa-86c6-35b585158b1a",
+        "b4d8a235-07fe-422c-836a-a95ecc1bbc1c"
+      ],
+      "settings": {
+        "sec_head": "Shop high-performance natural relief",
+        "sec_subhead": "Discover natural pain relief and recovery with our effective and safe products."
+      }
+    },
+    "1659533862496131aa": {
+      "type": "four-products-side-image",
+      "blocks": {
+        "ad5b9f2d-3460-4184-a6de-9a0bfbed0db5": {
+          "type": "card",
+          "settings": {
+            "product_item": "hylands-arnicaid-tablets-1"
+          }
+        },
+        "3276b1ac-0f92-4566-b5b0-264a0b7ca797": {
+          "type": "card",
+          "settings": {
+            "product_item": "hylands-arnisport-tablets-1"
+          }
+        },
+        "c435b5e6-3379-4adc-a951-259ffb6697c3": {
+          "type": "card",
+          "settings": {
+            "product_item": "hylands-muscle-therapy-gel"
+          }
+        },
+        "a2d8bf13-a7e7-437b-bea6-b724d427a287": {
+          "type": "card",
+          "settings": {
+            "product_item": "hylands-leg-cramps-ointment"
+          }
+        }
+      },
+      "block_order": [
+        "ad5b9f2d-3460-4184-a6de-9a0bfbed0db5",
+        "3276b1ac-0f92-4566-b5b0-264a0b7ca797",
+        "c435b5e6-3379-4adc-a951-259ffb6697c3",
+        "a2d8bf13-a7e7-437b-bea6-b724d427a287"
+      ],
+      "settings": {
+        "main_head": "Power up your workout routine",
+        "main_subhead": "",
+        "left_img": "shopify:\/\/shop_images\/3-1_5ed24e55-5c83-41c7-8b20-6a1959b4be4c.png",
+        "sec_head": "Hyland’s Pain Relief for Athletes",
+        "sec_subhead": "",
+        "shop_btn": "SHOP NOW",
+        "shop_btn_url": "https:\/\/shop.hylands.com\/collections\/pain",
+        "shop_all": "SHOP ALL",
+        "shop_all_url": "https:\/\/shop.hylands.com\/collections\/pain"
+      }
+    },
+    "165953413601339e09": {
+      "type": "image-text-section",
+      "settings": {
+        "badges": "I'M Loved !",
+        "main_head": "Train harder, recover faster",
+        "bodycopy": "<p>Stop Your Cramp, Not Your Day. At Hyland's, we’re big believers in the power of movement, which is why we want your body to feel its best. From our Leg Cramps family of products to post-workout relief, we have your training needs covered, so you can stay in the zone.<\/p>",
+        "shop_all": "SHOP PRODUCTS",
+        "shop_all_url": "https:\/\/shop.hylands.com\/collections\/recovery",
+        "right_img": "shopify:\/\/shop_images\/4-1_92615b74-d9c8-443a-beb6-9fc603d7d6ed.png"
+      }
+    },
+    "1659534516a915cae1": {
+      "type": "products-slider",
+      "blocks": {
+        "5e6798d7-1a6e-4a40-9a35-c971ba4eea49": {
+          "type": "card",
+          "settings": {
+            "best_seller": true,
+            "badges": "BESTSELLER",
+            "product_item": "hylands-leg-cramps-caplets"
+          }
+        },
+        "835e9a96-3224-4cc3-a15e-4b05c3649b63": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "badges": "",
+            "product_item": "hylands-muscle-therapy-gel"
+          }
+        },
+        "2d9b3673-f103-4930-846c-7949a35717a8": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "badges": "",
+            "product_item": "hylands-arnisport-tablets-1"
+          }
+        },
+        "73ae452b-57e9-409c-a9c2-da584ba1e14a": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "badges": "",
+            "product_item": "hylands-leg-cramps-ointment"
+          }
+        },
+        "ff2e4df7-b53a-45a5-a2a8-a3cea98da9c7": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "badges": "",
+            "product_item": "hylands-leg-cramps-pm"
+          }
+        },
+        "b8162e16-a48d-4a83-8412-16347d75a633": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "badges": "",
+            "product_item": "hylands-arnicaid-tablets-1"
+          }
+        }
+      },
+      "block_order": [
+        "5e6798d7-1a6e-4a40-9a35-c971ba4eea49",
+        "835e9a96-3224-4cc3-a15e-4b05c3649b63",
+        "2d9b3673-f103-4930-846c-7949a35717a8",
+        "73ae452b-57e9-409c-a9c2-da584ba1e14a",
+        "ff2e4df7-b53a-45a5-a2a8-a3cea98da9c7",
+        "b8162e16-a48d-4a83-8412-16347d75a633"
+      ],
+      "settings": {
+        "main_head": "Shop highly-rated picks by runners",
+        "main_subhead": "",
+        "shop_all": "SHOP ALL",
+        "shop_all_url": "https:\/\/shop.hylands.com\/collections\/pain"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1659531933532a0845",
+    "1659533862496131aa",
+    "165953413601339e09",
+    "1659534516a915cae1"
+  ]
+}

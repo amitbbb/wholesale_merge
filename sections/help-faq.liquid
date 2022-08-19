@@ -1,0 +1,65 @@
+{% if section.settings.sec_head != blank %}
+<h1>{{ section.settings.sec_head }}</h1>
+<p class="subhead">{{ section.settings.sec_subhead }}</p>
+<div class="faq-block-wrapper">
+    {% for block in section.blocks %}
+      <div class="faq-block">
+        <h3>{{ block.settings.heading }}</h3>
+        <p>{{ block.settings.text }}</p>
+        <a href="{{ block.settings.btn_url }}" class="block-btn">{{ block.settings.btn_text }}</a>
+      </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% schema %}
+{
+  "name": "Help FAQ Pages",
+  "class": "help-faq-page",  
+  "settings": [
+  {
+    "type": "text",
+    "id": "sec_head",
+    "label": "Heading"
+  },
+  {
+    "type": "text",
+    "id": "sec_subhead",
+    "label": "Sub Heading"
+  }    
+  ],
+  "blocks": [
+  {
+	"type": "card",
+	"name": "Card Block",
+	"settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Card Heading"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Card Text"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "default": "LEARN MORE",
+          "label": "Button Text"
+        },
+        {
+          "type": "text",
+          "id": "btn_url",
+          "label": "Button URL"
+        }
+      ]
+  }
+  ] ,
+  "presets": [
+  {
+    "name": "Help FAQ"
+  }
+  ]
+}
+{% endschema %}

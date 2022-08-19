@@ -1,0 +1,37 @@
+{% assign limit = 0001 %} 
+{% assign variant_id = '714603167759' %}
+
+<script>
+  (function($) {
+    var cartItems = {{ cart.items | json }},
+        qtyInTheCart = 0,
+          cartUpdates = {},
+          cartTotal = {{ cart.total_price }};
+        for (var i=0; i<cartItems.length; i++) {
+          if ( cartItems[i].id === {{ variant_id }} ) {
+              qtyInTheCart = cartItems[i].quantity;
+              break;
+              }
+              }
+              if ( ( cartItems.length === 1 ) && ( qtyInTheCart > 0 ) ) {
+            cartUpdates = { {{ variant_id }}: 1 }
+          }
+
+          else if ( ( cartItems.length >= 1 ) && ( qtyInTheCart !== 1 ) && (cartTotal >= {{ limit }} ) ) {
+                   cartUpdates = { {{ variant_id }}: 1 }
+                   }
+                   else {
+                   return;
+                   }
+                   var params = {
+                   type: 'POST',
+                   url: '/cart/update.js',
+                   data: { updates: cartUpdates },
+                   dataType: 'json',
+                   success: function(stuff) { 
+            window.location.href = '/cart';
+          }
+        };
+    $.ajax(params);
+  })(jQuery);
+</script>

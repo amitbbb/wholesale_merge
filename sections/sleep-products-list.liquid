@@ -1,0 +1,73 @@
+{% for block in section.blocks %}
+<div class="sleep-products-cards-wrapper">
+        <div class="card-left">
+          <h2>{{ block.settings.heading }}</h2>
+          <p>{{ block.settings.subheading }}</p>
+          <a href="{{ block.settings.shop_all_url }}">{{ block.settings.shop_all }}</a>
+          <div class="tags_list">
+            <h3>{{ block.settings.tag_head }}</h3>
+             <div class="sleep_tag">                                   
+              <p>{{ block.settings.tag_name | replace: "|", "<p>" }}</p>
+             </div>                                   
+          </div>
+        </div>
+    	<div class="card-right">
+          <img src="{{ block.settings.card_img | img_url: 'master' }}" alt="{{ block.settings.heading }}" />
+      </div>
+</div>
+{% endfor %}
+{% schema %}
+{
+  "name": "Sleep Products List",
+  "class": "sleep-products-cards",
+  "settings": [
+  ] ,
+  "blocks": [
+  {
+	"type": "card",
+	"name": "Sleep Products Cards",
+	"settings": [      
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "subheading",
+            "label": "Sub Heading"
+          },
+          {
+            "type": "image_picker",
+            "id": "card_img",
+            "label": "Card Image"
+          },
+          {
+            "type": "text",
+            "id": "shop_all",
+            "label": "Shop Button"
+          },
+          {
+            "type": "text",
+            "id": "shop_all_url",
+            "label": "Shop Button URL"
+          },        {
+          "type": "text",
+          "id": "tag_head",
+          "label": "Tags Heading"
+        },
+        {
+          "type": "text",
+          "id": "tag_name",
+          "label": "Tag Name"
+        }      
+      ]
+  }
+  ],
+  "presets": [
+  {
+    "name": "Sleep Products List"
+  }
+  ]
+}
+{% endschema %}

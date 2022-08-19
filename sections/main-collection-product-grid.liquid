@@ -1,0 +1,292 @@
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-product-grid.css' | asset_url | stylesheet_tag }}
+
+<link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+
+<div class="header-wrapper collection-header-wrapper">
+  <div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %}">
+  <div class="collection-hero__inner page-width">
+    <div class="collection-hero__text-wrapper">
+      <h1 class="collection-hero__title">
+        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+        {{- collection.title | escape -}}
+      </h1>
+      {%if collection.metafields.collection_nav.nav_item != blank %}
+      <div class="collection-nav collection-{{collection.handle}}">
+        <ul>
+          {%assign colls = collection.metafields.collection_nav.nav_item | split:'|' %}
+          {% for hand in colls %}
+          {% assign coll = collections[hand] %}
+          	<li class="{% if collection.handle == hand %}active{% endif %}"><a href="{{coll.url}}">{{coll.title}}</a></li>
+          {%endfor%}
+          {%comment%}
+          <li class="active"><a href="#">Adults</a></li>
+          <li><a href="#">Baby</a></li>
+          <li><a href="#">Kids</a></li>
+          <li><a href="#">Mom</a></li>
+          <li><a href="#">Athletes</a></li>
+          {%endcomment%}  
+        </ul>
+      </div>
+      {%endif%}
+          {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+      {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+      <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+
+      <div class="page-width" id="main-collection-filters" data-id="{{ section.id }}">
+        {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, collapse_on_larger_devices: section.settings.collapse_on_larger_devices %}
+      </div>
+    {%- endif -%}
+       
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="main-grid-wrap">
+
+<div class="filter-wrapper" data-collection-url="https://{{ shop.domain }}{{ collection.url }}">
+  <div class="filter-head">Filter by <span class="close-filter">+</span><i>Clear</i></div>
+  {% include 'customfilters' %}
+</div>
+  
+{% if collection.description != blank %}
+ <div class="desc-wrapper desktop">
+    <div class="collection-hero__description rte">{{ collection.description }}</div>
+ </div>
+{%- endif -%}
+  
+  
+<div id="ProductGridContainer">
+  {% comment %}
+  {{ section.settings.products_per_page }}
+  {% endcomment %}
+  
+  
+    {%- if collection.products.size == 0 -%}
+      <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
+        <div class="loading-overlay gradient"></div>
+        <div class="title-wrapper center">
+          <h2 class="title title--primary">
+            {{ 'sections.collection_template.empty' | t }}<br>
+            {{ 'sections.collection_template.use_fewer_filters_html' | t: link: collection.url, class: "underlined-link link" }}
+          </h2>
+        </div>
+      </div>
+    {%- else -%}
+      <div class="collection page-width">
+        <div class="loading-overlay gradient"></div>
+
+        <ul id="product-grid" data-id="{{ section.id }}" class="
+          grid grid--2-col negative-margin product-grid
+          {% if collection.products_count < 4 %} grid--{{ collection.products_count }}-col-tablet{% else %}
+            {% if collection.products_count == 4 %} grid--4-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}
+          {% endif %}">
+          
+          {%- for product in collection.products -%}
+          <script type="application/json" class="bold-product-json">{{ product | json }}</script>
+           {%- if product.variants.size > 1 and collection.handle != "cell-salts" -%}
+          	{% for op in product.options_with_values %}
+          		{% assign opName = op.name | downcase %}
+              {% if opName == "flavor" %}
+                {% for vars in product.variants %}
+                
+          	<!--p> Size: {{product.variants.size}}, {{ op.name }} - {% for value in op.values %}<span> | {{value}}</span>{% endfor %}</p-->
+          	<li class="var-x grid__item {% if forloop.index > section.settings.products_per_page %}grid-inactive{% endif %}">
+              {% render 'product-variant-card',
+                product_card_product: vars,
+                media_size: section.settings.image_ratio,
+                show_secondary_image: section.settings.show_secondary_image,
+                add_image_padding: section.settings.add_image_padding,
+                show_vendor: section.settings.show_vendor,
+                show_image_outline: section.settings.show_image_outline,
+                show_rating: section.settings.show_rating,
+              	show_desc: 'Yes',
+              	isVariant: true,
+              	product_card: product
+              %}
+            </li>
+            {% endfor %}
+          		{% else %}
+          		
+          	<li class="var-z grid__item {% if forloop.index > section.settings.products_per_page %}grid-inactive{% endif %}">
+              {% render 'product-card',
+                product_card_product: product,
+                media_size: section.settings.image_ratio,
+                show_secondary_image: section.settings.show_secondary_image,
+                add_image_padding: section.settings.add_image_padding,
+                show_vendor: section.settings.show_vendor,
+                show_image_outline: section.settings.show_image_outline,
+                show_rating: section.settings.show_rating,
+              	show_desc: 'Yes'
+              %}
+            </li>
+          		
+                {% endif %}
+              {% endfor %}
+              
+           {% else %}
+           
+            <li class="grid__item {% if forloop.index > section.settings.products_per_page %}grid-inactive{% endif %}">
+              {% render 'product-card',
+                product_card_product: product,
+                media_size: section.settings.image_ratio,
+                show_secondary_image: section.settings.show_secondary_image,
+                add_image_padding: section.settings.add_image_padding,
+                show_vendor: section.settings.show_vendor,
+                show_image_outline: section.settings.show_image_outline,
+                show_rating: section.settings.show_rating,
+              	show_desc: 'Yes'
+              %}
+            </li>
+           {% endif %}
+          {% if forloop.index == 6 %}
+          {% if collection.metafields.collection_promo.promo_img != blank %}
+          <li class="grid__item promo_banner">
+            <div class="banner-wrapper">
+              <a href="{{collection.metafields.collection_promo.promo_btn_url}}">
+            <img src="{{collection.metafields.collection_promo.promo_img}}" class="banner-image">
+              </a>
+              <div class="banner-text">
+                <a href="{{collection.metafields.collection_promo.promo_btn_url}}"><h2>{{collection.metafields.collection_promo.promo_heading}}</h2></a>
+                <h3><a href="{{collection.metafields.collection_promo.promo_btn_url}}">{{collection.metafields.collection_promo.promo_btn}}</a></h3>
+              </div>
+            </div>
+            
+          </li>
+          {%endif%}
+          {%endif%}
+
+          {%- endfor -%}
+        </ul>
+        {% if collection.products.size > 12 %}
+        <div class="see-all btn-banner"><a href="#">SEE ALL</a></div>
+        {% endif %}
+		{%comment%}
+        {%- if paginate.pages > 1 -%}
+          {% render 'pagination', paginate: paginate, anchor: '' %}
+        {%- endif -%}
+        
+        
+        {% if paginate.pages > 1 %}
+        <div id="AjaxinatePagination">
+          {% if paginate.next %}
+            <a href="{{ paginate.next.url }}">Loading More</a>
+          {% endif %}
+    	</div>
+        {% endif %}
+        {%endcomment%}
+        
+      </div>
+    {%- endif -%}
+  
+  {% comment %}
+  {{ section.settings.products_per_page }} end paginate here
+  {% endcomment %}
+  
+  
+  
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-product-grid.name",
+  "class": "spaced-section collection-grid-section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 8,
+      "max": 24,
+      "step": 4,
+      "default": 16,
+      "label": "t:sections.main-collection-product-grid.settings.products_per_page.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header__3.content"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.main-collection-product-grid.settings.image_ratio.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_secondary_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "add_image_padding",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.add_image_padding.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image_outline",
+      "default": true,
+      "label": "t:sections.main-collection-product-grid.settings.show_image_outline.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_vendor.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_rating.label",
+      "info": "t:sections.main-collection-product-grid.settings.show_rating.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header__1.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_filtering",
+      "default": true,
+      "label": "t:sections.main-collection-product-grid.settings.enable_filtering.label",
+      "info": "t:sections.main-collection-product-grid.settings.enable_filtering.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "default": true,
+      "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "collapse_on_larger_devices",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.collapse_on_larger_devices.label"
+    }
+  ]
+}
+{% endschema %}

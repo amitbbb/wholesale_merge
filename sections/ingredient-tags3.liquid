@@ -1,0 +1,95 @@
+{%  if section.blocks.size > 0 %}
+<div class="ingredient-wrapper ing-nextWrapper">
+  <ul class="ingredient-list">
+      {% for block in section.blocks %}
+        {% assign matchTag = block.settings.match_tag | downcase %}
+    	{% for tag in product.tags %}
+    	{% assign pTag = tag | downcase %}
+    	{% if pTag == matchTag %}
+    	
+    <li>
+      <div class="ing-image">
+        {%- if block.settings.image != blank -%}
+        {% assign image = block.settings.image %}
+          <img
+            srcset="{%- if image.width >= 165 -%}{{ image | img_url: '165x' }} 165w,{%- endif -%}
+              {%- if image.width >= 360 -%}{{ image | img_url: '360x' }} 360w,{%- endif -%}
+              {%- if image.width >= 535 -%}{{ image | img_url: '535x' }} 535w,{%- endif -%}
+              {%- if image.width >= 750 -%}{{ image | img_url: '750x' }} 750w,{%- endif -%}
+              {%- if image.width >= 1070 -%}{{ image | img_url: '1070x' }} 1070w,{%- endif -%}
+              {%- if image.width >= 1500 -%}{{ image | img_url: '1500x' }} 1500w,{%- endif -%}
+              {{ image | img_url: 'master' }} {{ image.width }}w"
+            src="{{ image | img_url: '1500x' }}"
+            sizes="(min-width: {{ block.page_width }}px) {{ block.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+            alt="{{ image.alt | escape }}"
+            loading="lazy"
+            width="{{ image.width }}"
+            height="{{ image.height }}"
+          >
+        {% endif %}
+      </div>
+      <div class="ing-text">
+        <div class="text-wrap">
+        {% if block.settings.heading == blank %}
+        <h3>{{ block.settings.match_tag }}</h3>
+        {% else %}
+        <h3>{{ block.settings.heading }}</h3>
+        {% endif %}
+          <div class="tag-text">{{ block.settings.tag_details }}</div>
+        </div>
+      </div>
+    </li>
+    	{% endif %}
+    	{% endfor %}
+      {% endfor %}
+    
+  </ul>
+</div>
+{% endif %}
+
+
+{% schema %}
+  {
+    "name": "Ingredient Tags 3",
+  	"tag": "section",
+    "class": "ingredient-tag3 ingredientsTags",
+    "settings": [
+	],
+	"blocks": [
+      {
+        "type": "tag-detsils",
+        "name": "Tag Details",
+        "settings": [
+          {
+             "type": "text",
+             "id": "match_tag",
+             "label": "Tag match with",
+			 "info": "Enter a tag name to match with details"
+          },
+          {
+             "type": "text",
+             "id": "heading",
+             "label": "Heading"
+          },
+		  {
+             "type": "image_picker",
+             "id": "image",
+             "label": "Image"
+          },
+		  {
+             "type": "richtext",
+             "id": "tag_details",
+             "label": "Tag details"
+          }
+        ]
+      }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+
+{% endjavascript %}

@@ -1,0 +1,143 @@
+{{ 'search-component.css' | asset_url | stylesheet_tag }}
+
+<!-- <div class="search-component js-search-component">
+  <div class="search-component__form">
+    <form action="{{ routes.search_url }}" method="get" role="search">
+      <input
+        class="search-component js-search-input"
+        type="search"
+        name="q"
+        value="{{ search.terms | escape }}"
+          role="combobox"
+          aria-expanded="false"
+          aria-owns="predictive-search-results-list"
+          aria-controls="predictive-search-results-list"
+          aria-haspopup="listbox"
+          aria-autocomplete="list"
+          autocorrect="off"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+      >
+      <input name="options[prefix]" type="hidden" value="last">
+    </form>
+  </div>
+  <div class="search-component__results">
+    <div class="search-component__grid js-search-component-results" role="listbox" aria-labelledby="predictive-search-products"></div>
+  </div>
+</div> -->
+
+<div class="search-component js-search-component">
+  <div class="search-component__form">
+    <form action="/search" method="get" role="search">
+      <input
+        class="search-component js-search-input"
+        type="search"
+        name="q"
+        value=""
+          role="combobox"
+          aria-expanded="false"
+          aria-owns="predictive-search-results-list"
+          aria-controls="predictive-search-results-list"
+          aria-haspopup="listbox"
+          aria-autocomplete="list"
+          autocorrect="off"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+      >
+      <input name="options[prefix]" type="hidden" value="last">
+    </form>
+  </div>
+  <div class="search-component__results">
+    <div class="search-component__grid js-search-component-results" role="listbox" aria-labelledby="predictive-search-products"></div>
+  </div>
+</div>
+
+<div class="js-search-product-placeholder">
+  <h1>hello</h1>
+</div>
+
+
+<script>
+  function searchComponent(elem) {
+    const searchInput = document.querySelector(elem);
+    const searchResults = document.querySelector('.js-search-component-results');
+    const placeholder = document.querySelector('.js-search-product-placeholder');
+
+    function debounce(fn, wait) {
+      let t;
+      return (...args) => {
+        clearTimeout(t);
+        t = setTimeout(() => fn.apply(this, args), wait);
+      };
+    }
+  
+    function removePlaceholder() {
+      placeholder.style.display = "none"; 
+    }
+    
+    function showPlaceholder() {
+      placeholder.style.display = "block";
+    }
+
+    function clearResults() {
+      searchResults.style.display = "none"; 
+    }
+
+    function showResults() {
+      searchResults.style.display = "flex";
+    }
+
+    function onChange() {
+      const searchTerm = searchInput.value.trim();
+
+      if (!searchTerm.length || searchTerm.length < 0) {
+        clearResults();
+        showPlaceholder();
+        return;
+      }
+      
+      removePlaceholder();
+      getSearchResults(searchTerm);
+    }
+
+    function getSearchResults(searchTerm) {
+      fetch(`${routes.predictive_search_url}?q=${searchTerm}&resources[type]=product&resources[limit]=3&section_id=search-component-results`)
+        .then((response) => {
+          if (!response.ok ) {
+            var error = new Error(response.status);
+            clearResults();
+            showPlaceholder();
+            throw error;
+          }
+          return response.text();
+        })
+        .then((results) => {
+
+          const resultsMarkup = new DOMParser().parseFromString(results, 'text/html').querySelector('#shopify-section-search-component-results').innerHTML;
+          searchResults.innerHTML = resultsMarkup;
+          
+          if (!results.length || resultsMarkup.length < 1) {
+            clearResults();
+            showPlaceholder();
+            return;
+          }
+          console.log(resultsMarkup.length)
+          showResults();
+        })
+        .catch((error) => {
+          clearResults();
+          throw error;
+        });
+      }
+
+      searchInput.addEventListener('input', debounce((event) => {
+        onChange(event);
+        
+      }, 300).bind(this));
+    }
+
+  const elem = searchComponent('.js-search-input');
+
+</script>

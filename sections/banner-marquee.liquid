@@ -1,0 +1,24 @@
+  {% if section.settings.marquee != blank %}
+  <div class="marquee-container">
+      <div class="marquee">{{ section.settings.marquee }}</div>
+  </div>
+  {% endif %}
+
+{% schema %}
+{
+  "name": "Banner Marquee",
+  "class": "hero-marquee",
+  "settings": [
+    {
+      "type": "text",
+      "id": "marquee",
+      "label": "Marquee text"
+    }
+  ],
+   "presets": [
+    {
+      "name": "Banner Marquee"
+    }
+  ]
+}
+{% endschema %}

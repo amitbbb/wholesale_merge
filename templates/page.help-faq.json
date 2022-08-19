@@ -1,0 +1,109 @@
+{
+  "wrapper": "div.help-faq-templete",
+  "sections": {
+    "main": {
+      "type": "help-faq",
+      "blocks": {
+        "5a8ebc14-f5cd-44ea-9dab-cee1d72798ea": {
+          "type": "card",
+          "settings": {
+            "heading": "General",
+            "text": "Some frequently asked questions.",
+            "btn_text": "LEARN MORE",
+            "btn_url": "#"
+          }
+        },
+        "53ceb9d7-d85d-4290-b10e-d4767d4da20d": {
+          "type": "card",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "text": "Learn more about our<br>policies.",
+            "btn_text": "LEARN MORE",
+            "btn_url": "#"
+          }
+        },
+        "b0a32362-a875-40f3-8ebf-1ed86995af7a": {
+          "type": "card",
+          "settings": {
+            "heading": "Contact Us",
+            "text": "Can't find what you're looking for ?",
+            "btn_text": "LEARN MORE",
+            "btn_url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "5a8ebc14-f5cd-44ea-9dab-cee1d72798ea",
+        "53ceb9d7-d85d-4290-b10e-d4767d4da20d",
+        "b0a32362-a875-40f3-8ebf-1ed86995af7a"
+      ],
+      "settings": {
+        "sec_head": "Help by Category",
+        "sec_subhead": "How can we help you?",
+        "block_head": "General"
+      }
+    },
+    "16603101684a34368e": {
+      "type": "faq-accordion",
+      "blocks": {
+        "b5f7bc43-ae86-4806-af99-855cfa9fede9": {
+          "type": "accordion",
+          "settings": {
+            "acc_heading": "Do your products contain any allergens (peanuts, shellfish, gluten, etc.)?",
+            "acc_text": "Our product labels include allergen information, or please visit the product page on Hylands.com for product-specific information."
+          }
+        },
+        "50b0e488-96cc-497e-8a8d-626c10ad08dd": {
+          "type": "accordion",
+          "settings": {
+            "acc_heading": "Are Hyland's products and the ingredients made in the USA?",
+            "acc_text": "Hyland's products are manufactured in the United States (USA) with ingredients sourced globally."
+          }
+        },
+        "e3cdca8b-ff31-4852-a0ce-599228c30f08": {
+          "type": "accordion",
+          "settings": {
+            "acc_heading": "Do your products have an expiration date?",
+            "acc_text": "Products that do not have expiration dating are compliant with the FDA guidelines and you should feel confident in continuing to use them. However, if you notice a change in product appearance, you should replace it."
+          }
+        },
+        "929bfeb9-d1ab-4d75-a60a-0dea81bedc97": {
+          "type": "accordion",
+          "settings": {
+            "acc_heading": "Can Hyland's products be taken with other medicine?",
+            "acc_text": "In general, our products have no known drug interactions. Please consult your healthcare provider to see if particular products are appropriate in your individual case."
+          }
+        },
+        "589a5f54-1d00-4f62-9641-41e8d09a7c4f": {
+          "type": "accordion",
+          "settings": {
+            "acc_heading": "What are the side effects of your products?",
+            "acc_text": "Our products have a very wide margin of safety, but there is always the possibility of sensitivity or allergy to an ingredient. Please visit product pages on Hylands.com for specific product information."
+          }
+        },
+        "b6a6036f-b25a-4ae3-a7af-8af5a73bf4a6": {
+          "type": "accordion",
+          "settings": {
+            "acc_heading": "What is Lactose NF?",
+            "acc_text": "Lactose NF is a sugar derived from milk which is free of any milk proteins (whey or casein.) It is an inactive ingredient in Hyland's tablets."
+          }
+        }
+      },
+      "block_order": [
+        "b5f7bc43-ae86-4806-af99-855cfa9fede9",
+        "50b0e488-96cc-497e-8a8d-626c10ad08dd",
+        "e3cdca8b-ff31-4852-a0ce-599228c30f08",
+        "929bfeb9-d1ab-4d75-a60a-0dea81bedc97",
+        "589a5f54-1d00-4f62-9641-41e8d09a7c4f",
+        "b6a6036f-b25a-4ae3-a7af-8af5a73bf4a6"
+      ],
+      "settings": {
+        "sec_head": "General"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16603101684a34368e"
+  ]
+}

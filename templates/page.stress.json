@@ -1,0 +1,95 @@
+{
+  "wrapper": "div.stress-templete",
+  "sections": {
+    "main": {
+      "type": "sleep-banner",
+      "settings": {
+        "hero_heading": "Explore Hyland's Stress Relief Remedies",
+        "hero_sub_heading": "Browse our selection to find the best choice for you."
+      }
+    },
+    "1660123917960260d7": {
+      "type": "sleep-products-list",
+      "blocks": {
+        "e544df64-bd85-46d1-acc7-ff3cfa52b25b": {
+          "type": "card",
+          "settings": {
+            "heading": "Regain your calm with the right remedy.",
+            "subheading": "Stress, nervousness, or anxiety taking over your day? Promote a sense of peace instead with this safe and gentle formula. Our quick-dissolving tablets work fast to help restore calm and get you feeling grounded again.",
+            "card_img": "shopify:\/\/shop_images\/1_b3622ba7-33bf-406f-bbc4-0cf4b16a9f54.png",
+            "shop_all": "SHOP CALM",
+            "shop_all_url": "#",
+            "tag_head": "CAN HELP RELIEVE INSOMNIA DUE TO:",
+            "tag_name": "RESTLESSNESS | IRRITABILITY | NERVOUSNESS | ANXIOUSNESS"
+          }
+        },
+        "d12360d9-6b79-417c-879f-288ad6d7483a": {
+          "type": "card",
+          "settings": {
+            "heading": "Take care of those busy, stressful moments.",
+            "subheading": "This blend of L-Theanine, Lemon Balm, and Chamomile is formulated to help you relax and focus. Each raspberry-flavored gummy is also non-drowsy, meaning you can take one whenever you need it and not worry about falling alseep during those important moments.",
+            "card_img": "shopify:\/\/shop_images\/2_cf132134-147f-415f-9f6d-c62f50717178.png",
+            "shop_all": "SHOP STRESS BUSTERS",
+            "shop_all_url": "#",
+            "tag_head": "CAN HELP RELIEVE INSOMNIA DUE TO:",
+            "tag_name": "STRESS"
+          }
+        },
+        "b78bd398-ffc0-4c16-a277-52b183595d52": {
+          "type": "card",
+          "settings": {
+            "heading": "Formulas created to support your mind",
+            "subheading": "When stress is leading you to feel physically tense, this formula can bring some relief. Our natural, quick-dissolving tablets help your body relax nervous tension and your mind settle.",
+            "card_img": "shopify:\/\/shop_images\/3_ba66218c-7bf5-43d4-a004-caa0efd788eb.png",
+            "shop_all": "SHOP NERVE TONIC",
+            "shop_all_url": "#",
+            "tag_head": "CAN HELP RELIEVE INSOMNIA DUE TO:",
+            "tag_name": "NERVOUS TENSION | ANXIOUSNESS"
+          }
+        }
+      },
+      "block_order": [
+        "e544df64-bd85-46d1-acc7-ff3cfa52b25b",
+        "d12360d9-6b79-417c-879f-288ad6d7483a",
+        "b78bd398-ffc0-4c16-a277-52b183595d52"
+      ],
+      "settings": {
+      }
+    },
+    "1660124319c341d8a7": {
+      "type": "our-sleep",
+      "blocks": {
+        "68c395c6-f028-4d29-bc0e-66794c92e2d6": {
+          "type": "card",
+          "settings": {
+            "card_head": "I love that I found something that really works",
+            "star_img": "shopify:\/\/shop_images\/download_7d1fe47b-e5aa-437a-8b09-d27baf729d50.jpg",
+            "card_text": "I do real estate and have two kids and my days can get pretty stressful I’m glad I found this clean product that’s vegan, non gmo. It helps me relax and be calm . I usually take it right before a nice bubble bath.\"",
+            "cust_name": "- Mommy A. on <span>Stress Busters<\/span>"
+          }
+        },
+        "4ab80007-dfb3-4471-a653-5f54ad1a744f": {
+          "type": "card",
+          "settings": {
+            "card_head": "An Absolute Must Have!",
+            "star_img": "shopify:\/\/shop_images\/download_7d1fe47b-e5aa-437a-8b09-d27baf729d50.jpg",
+            "card_text": "\"I absolutely love this stuff! It definitely gets rid of anxiety, nervousness and stress by just dissolving 2 tablets under your tounge. I get anxiety a lot especially around the holidays but I think this year I always have this product on hand! Thanks Hyland's!!!\"",
+            "cust_name": "- M A. on <span>Calm Tablets<\/span>"
+          }
+        }
+      },
+      "block_order": [
+        "68c395c6-f028-4d29-bc0e-66794c92e2d6",
+        "4ab80007-dfb3-4471-a653-5f54ad1a744f"
+      ],
+      "settings": {
+        "sec_head": "Customers love our stress-relief remedies!"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1660123917960260d7",
+    "1660124319c341d8a7"
+  ]
+}

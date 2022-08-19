@@ -1,0 +1,77 @@
+<div class="custom-search-container">
+  {% if section.settings.sec_head != blank %}
+    <h2>{{ section.settings.sec_head }}</h2>
+  {% endif %}
+      <div class="search-component js-search-component">
+      <div class="search-component__form">
+        <form action="/search" method="get" role="search">
+          <input
+            class="search-component js-search-input"
+            type="search"
+            name="q"
+            value=""
+              role="combobox"
+              aria-expanded="false"
+              aria-owns="predictive-search-results-list"
+              aria-controls="predictive-search-results-list" 
+              placeholder="I'm looking for.. 'pain relief'" 
+              aria-haspopup="listbox"
+              aria-autocomplete="list"
+              autocorrect="off"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+          >
+          <input name="options[prefix]" type="hidden" value="last">
+        </form>
+      </div>
+      <div class="search-component__results">
+        <div class="search-component__grid js-search-component-results" role="listbox" aria-labelledby="predictive-search-products">
+        
+        </div>
+      </div>
+    </div>
+    <div class="product-group">
+      {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product_item] %}
+        <div class="product-card">
+          <a href="{{ product.url }}">
+            <img src="{{ product.featured_image | img_url: 'master' }}"  border="0" />
+            <h4>{{ product.title }}</h4>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Search",
+  "class": "customSearch search-enabled bg-img-home-sec",  
+  "settings": [
+  {
+    "type": "text",
+    "id": "sec_head",
+    "label": "Heading"
+  }   
+  ] ,
+  "blocks": [
+  {
+	"type": "card",
+	"name": "Product card",
+	"settings": [
+	  {
+	    "type": "product",
+		"id": "product_item",
+		"label": "Choose the product you want displayed"
+	  }
+      ]
+  }
+  ],
+  "presets": [
+  {
+    "name": "Custom Search"
+  }
+  ]
+}
+{% endschema %}

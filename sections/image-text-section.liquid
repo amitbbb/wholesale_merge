@@ -1,0 +1,82 @@
+<div class="blocks-wrapper">
+  <div class="left-block">
+    {% if section.settings.badges != blank %}
+      <div class="badges-text">
+        <p><span>{{ section.settings.badges }}</span></p>
+        {% if section.settings.cartoon != blank %}<img src="{{ section.settings.cartoon | img_url: 'master' }}" alt="" />{% endif %}
+      </div>
+    {% endif %}
+    {% if section.settings.main_head != blank %} 
+      <h2>{{ section.settings.main_head }}</h2>
+    {% endif %}
+    {% if section.settings.bodycopy != blank %}
+      <div class="bodycopy">
+        {{ section.settings.bodycopy }}
+      </div>
+      <p class="shop-btn-small">
+        <a class="shop-btn" href="{{ section.settings.shop_all_url }}">{{ section.settings.shop_all }}</a>
+      </p>
+    {% endif %}
+  </div>
+  <div class="right-block">
+    {% if section.settings.cartoon1 != blank %}
+      <img class="butterfly" src="{{ section.settings.cartoon1 | img_url: 'master' }}" alt="" />
+    {% endif %}
+    {% if section.settings.right_img != blank %}
+      <img class="right-bg" src="{{ section.settings.right_img | img_url: 'master' }}" alt="" />
+    {% endif %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Right Image and Left Text",
+  "class": "right-image-text",
+  "settings": [
+  {
+    "type": "text",
+    "id": "badges",
+    "label": "Badge Text"
+  },
+  {
+    "type": "image_picker",
+    "id": "cartoon",
+    "label": "Cartoon Image"
+  },
+  {
+    "type": "text",
+    "id": "main_head",
+    "label": "Section Heading"
+  },
+  {
+    "type": "richtext",
+    "id": "bodycopy",
+    "label": "Body Copy Text"
+  },
+  {
+    "type": "text",
+    "id": "shop_all",
+    "label": "Shop All Btn Text"
+  },
+  {
+    "type": "text",
+    "id": "shop_all_url",
+    "label": "Shop All URL"
+  },
+  {
+    "type": "image_picker",
+    "id": "right_img",
+    "label": "Right Side Image"
+  },
+  {
+    "type": "image_picker",
+    "id": "cartoon1",
+    "label": "Right Cartoon Image"
+  }
+  ],
+  "presets": [
+  {
+    "name": "Right Image and Left Text"
+  }
+  ]
+}
+{% endschema %}

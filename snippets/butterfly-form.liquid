@@ -1,0 +1,29 @@
+<input type="text" id="code" placeholder="Enter your butterfly code">
+<input type="hidden" id="shopify_user_id" name="shopify_user_id" value="{customer.id}">
+<input type="hidden" id="user_email" name="user_email" value="{customer.email}">
+<input type="hidden" id="user_firstname" name="user_firstname" value="{customer.first_name}">
+<input type="hidden" id="user_lastname" name="user_lastname" value="{customer.last_name}">
+
+<button onclick="redeemCode()">Redeem Code</button>
+<script>
+  function redeemCode(){              
+    let code = document.querySelector('#code');
+    let shopify_user_id = document.querySelector('#shopify_user_id');
+    let user_email = document.querySelector('#user_email');
+    let user_firstname = document.querySelector('#user_firstname');
+    let user_lastname = document.querySelector('#user_lastname');  
+    
+    var xhr = new XMLHttpRequest();
+    var url = "https://darm22cqu3gdxmebjehpxwocc40gnosu.lambda-url.us-west-1.on.aws/"
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader('Content-Type', 'application/json');
+	var data = JSON.stringify({
+    	shopify_user_id: {user.id},
+  		user_email: {user.email},
+  		user_firstname: {user.firstname},
+  		user_lastname: {user.lastname},
+  		code: {form input}
+	});
+    xhr.send(data);    
+  }
+</script>

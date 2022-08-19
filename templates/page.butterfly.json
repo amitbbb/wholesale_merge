@@ -1,0 +1,61 @@
+{
+  "sections": {
+    "main": {
+      "type": "butterfly-banner",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/banner-main1.png",
+        "fly_image": "shopify:\/\/shop_images\/butterfly-one.png",
+        "heading": "Find a unique code on the Butterfly Origami included with your order.",
+        "sub_heading": "Enter code below for great rewards."
+      }
+    },
+    "steps": {
+      "type": "butterfly-steps-section",
+      "blocks": {
+        "0e6cc667-cd35-4c41-8b56-44da638dfc5d": {
+          "type": "steps",
+          "settings": {
+            "number": "1",
+            "heading": "STEP ONE",
+            "text": "<p>Receive a different monthly butterfly origami with every order from July 2022 through December 2022<\/p>"
+          }
+        },
+        "1f52e48b-90d9-4716-9c39-6a3541de22e8": {
+          "type": "steps",
+          "settings": {
+            "number": "2",
+            "heading": "STEP TWO",
+            "text": "<p>Enter one unique code from each month in the box above <a href=\"#\" title=\"#\">(one code will be accepted per month\/customer)<\/a><\/p>"
+          }
+        },
+        "a818e6ec-7623-4c98-b6c4-79d6657af779": {
+          "type": "steps",
+          "settings": {
+            "number": "3",
+            "heading": "STEP THREE",
+            "text": "<p>We’ll email or send you a different reward, offer or prize for each code you enter <a href=\"#\" title=\"#\">(prizes escalate the more codes you enter)<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "0e6cc667-cd35-4c41-8b56-44da638dfc5d",
+        "1f52e48b-90d9-4716-9c39-6a3541de22e8",
+        "a818e6ec-7623-4c98-b6c4-79d6657af779"
+      ],
+      "settings": {
+        "linkText": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/ihgkQiXs15c\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe>",
+        "link": "#"
+      }
+    },
+    "instagram": {
+      "type": "instagram-feed",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "steps",
+    "instagram"
+  ]
+}

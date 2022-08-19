@@ -1,0 +1,25 @@
+{% assign customer_tags = customer.tags | downcase | join: ", "  %}
+{% assign current_date = 'now' | date: '%s' %}
+{% assign wholesale_exp_date = customer.metafields.my_fields.wholesale_expiration | date: '%s' %}
+
+
+{% if customer_tags contains "wholesale" %}
+	{% assign is_wholesale = true %}
+	
+	{% if wholesale_exp_date != null and current_date > wholesale_exp_date %}
+		{% assign is_expired = true %}
+	{% else %}
+		{% assign is_expired = false %}
+	{% endif %}
+{% else %}
+	{% assign is_wholesale = false %}
+	{% assign is_expired = false %}
+{% endif %}
+
+
+<script>
+   window.wholesale = {
+     is_wholesale: {{ is_wholesale }}, 
+     is_expired: {{ is_expired }},
+   }
+</script>

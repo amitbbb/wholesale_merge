@@ -1,0 +1,90 @@
+<div class="contact_heading">
+     <h2>{{section.settings.heading}}</h2>
+</div>
+
+<div class="contact_main">
+<div class="contact_main-inner">
+    <div class="contact_chat contact-main_div">
+      {% if section.settings.icon1 != blank%}
+      <img src="{{section.settings.icon1 | img_url: 'original' }} "> 
+      {% endif %}
+        <div class="page-contact_chat">
+          {% if section.settings.chat != blank%}
+              <p>{{section.settings.chat }} </p>
+              {% endif %}
+          </div>
+          <a href="tel:{{section.settings.chat1url }}">{{section.settings.chat1 }}</a>
+          
+    </div>
+
+  <div class="page-contact_email contact-main_div">
+     {% if section.settings.icon2 != blank%}
+      <img src="{{section.settings.icon2 | img_url: 'original' }} "> 
+      {% endif %}
+       <div class="page-contact_chat">
+          {% if section.settings.email != blank%}
+              <p>{{section.settings.email }} </p>
+              {% endif %}
+          </div>
+          <a href="mailto:{{section.settings.email1 }}">{{section.settings.email1 }}</a>
+    </div>
+</div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Contact New",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon1",
+      "label": "Icon 1"
+    },
+    {
+      "type": "text",
+      "id": "chat",
+      "label": "Chat Heading"
+    },
+    {
+      "type": "text",
+      "id": "chat1",
+      "label": "Chat"
+    },
+  {
+      "type": "url",
+      "id": "chat1url",
+      "label": "Chat Contact Number"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon2",
+      "label": "Icon 2"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email Heading"
+    },
+    {
+      "type": "text",
+      "id": "email1",
+      "label": "Email"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact New"
+    }
+  ]
+}
+{% endschema %}
+

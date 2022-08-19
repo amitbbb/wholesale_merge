@@ -1,0 +1,69 @@
+{% if section.settings.main_head != blank %}
+<div class="main-text-block">
+    <h2>{{ section.settings.main_head }}</h2>
+    <p>{{ section.settings.main_subhead }}</p>
+</div>
+{% endif %}
+<div class="cell-landing-products-slider">
+  {% for block in section.blocks %}
+      {% assign product = all_products[block.settings.product_item] %}
+      <div class="product-card">
+          
+        
+        <a href="{{ product.url }}">
+            <div class="product_number">{{ forloop.index}}</div>
+          <img src="{{ product.featured_image | img_url: 'master' }}"  border="0" />
+          <h4>{{ product.title }}</h4>
+        </a>
+      </div>
+    {% endfor %}
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Cell Products Slider",
+  "class": "cel-landing-products-slider-main",
+  "settings": [
+  {
+    "type": "text",
+    "id": "main_head",
+    "label": "Section Heading"
+  },
+  {
+    "type": "text",
+    "id": "main_subhead",
+    "label": "Section Sub Heading"
+  },
+  {
+    "type": "text",
+    "id": "shop_all",
+    "label": "Shop All Btn Text"
+  },
+  {
+    "type": "text",
+    "id": "shop_all_url",
+    "label": "Shop All URL"
+  }
+  ] ,
+  "blocks": [
+  {
+	"type": "card",
+	"name": "Product card",
+	"settings": [ 
+	  {
+	    "type": "product",
+		"id": "product_item",
+		"label": "Choose the product you want displayed"
+	  }
+      ]
+  }
+  ] ,
+  "presets": [
+  {
+    "name": "Cell Products Slider"
+  }
+  ]
+}
+{% endschema %}

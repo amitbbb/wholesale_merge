@@ -1,0 +1,86 @@
+{
+  "wrapper": "div.sleep-page-templete",
+  "sections": {
+    "main": {
+      "type": "sleep-banner",
+      "settings": {
+        "hero_heading": "Explore Hyland's Sleep Aid Remedies",
+        "hero_sub_heading": "Browse our selection to find the best choice for you."
+      }
+    },
+    "166002836266ed39e3": {
+      "type": "sleep-products-list",
+      "blocks": {
+        "ec8bdf97-669e-45b7-955d-8634e298384a": {
+          "type": "card",
+          "settings": {
+            "heading": "Find a remedy for every type of sleeplessness.",
+            "subheading": "Emotions and worry keeping you up at night? Our Sleep remedy features Ignatia as its hero ingredient to promote comfort and relief from nervousness.",
+            "shop_all": "SHOP SLEEP",
+            "shop_all_url": "#"
+          }
+        },
+        "2fcd3d45-bee0-47c2-8a05-59293c0e6764": {
+          "type": "card",
+          "settings": {
+            "heading": "Tried-and-true botanicals to support great rest.",
+            "subheading": "Formulated primarily from botanicals, our Rest remedy addresses the all-too-common experience of difficulty falling asleep, regardless of the cause.",
+            "shop_all": "SHOP REST",
+            "shop_all_url": "https:\/\/wholesale.hylands.com\/collections\/stress-sleep\/products\/hylands-rest"
+          }
+        },
+        "71574c2e-16e2-485d-9b35-e01b8a384ec9": {
+          "type": "card",
+          "settings": {
+            "heading": "Tackle routine cases of sleeplessness.",
+            "subheading": "For routine cases, Calms Forte will work quickly to get you back to sleep. It’s our blend of botanicals and minerals formulated to relieve sleeplessness caused by stress and nervous tension.",
+            "shop_all": "SHOP CALMS FORTE",
+            "shop_all_url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "ec8bdf97-669e-45b7-955d-8634e298384a",
+        "2fcd3d45-bee0-47c2-8a05-59293c0e6764",
+        "71574c2e-16e2-485d-9b35-e01b8a384ec9"
+      ],
+      "settings": {
+      }
+    },
+    "166003207693c983d3": {
+      "type": "our-sleep",
+      "blocks": {
+        "e4e203af-a784-4e27-ad3a-8971a39f9f28": {
+          "type": "card",
+          "settings": {
+            "card_head": "Finally Sleep",
+            "star_img": "shopify:\/\/shop_images\/download_343fe7b4-6bfc-40a9-9ee0-3e6390a3545c.png",
+            "card_text": "\"I have anxiety and terrible insomnia. The Hyland's sleep, rest and calm products are so wonderful. They relieve much of my anxiety, bringing a sense of calm and tranquility so that I can actually get some rest.\"",
+            "cust_name": "- Decemberstar76 on Sleep"
+          }
+        },
+        "c0e4cd70-afd0-4a78-8432-513637550f1c": {
+          "type": "card",
+          "settings": {
+            "card_head": "Fantastic sleep aid!",
+            "star_img": "shopify:\/\/shop_images\/download_343fe7b4-6bfc-40a9-9ee0-3e6390a3545c.png",
+            "card_text": "\"My mind is always working. And I often go through my to-do list in bed while I'm trying to sleep. No bueno. Calms Forté helps calm my mind and helps me fall asleep faster. Love it!\"",
+            "cust_name": "- Tania96 on Calms Forté"
+          }
+        }
+      },
+      "block_order": [
+        "e4e203af-a784-4e27-ad3a-8971a39f9f28",
+        "c0e4cd70-afd0-4a78-8432-513637550f1c"
+      ],
+      "settings": {
+        "sec_head": "Customers love our sleep aid remedies!"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "166002836266ed39e3",
+    "166003207693c983d3"
+  ]
+}

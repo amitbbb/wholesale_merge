@@ -1,0 +1,119 @@
+<div class="main-text-block">
+    <h2>{{ section.settings.main_head }}</h2>
+    {% if section.settings.main_subhead != blank %}<p>{{ section.settings.main_subhead }}</p>{% endif %}
+</div>
+<div class="left-side-main-container {{ page.title | replace: " ", "-" | downcase }}">
+  <div class="left-side-container">
+    {% if section.settings.cartoon_img != blank %}
+      <div class="cartoon">
+        <img class="cartoon_img" src="{{ section.settings.cartoon_img|img_url:'master'}}" alt="{{ section.settings.sec_head }}">
+        </div>
+    {% endif %}
+    {% if section.settings.left_img != blank %}
+      <img class="sec-bg" src="{{ section.settings.left_img|img_url:'master'}}" alt="{{ section.settings.sec_head }}">
+    {% endif %}
+    {% if section.settings.sec_head != blank %}
+      <div class="text-block">
+        <h3>{{ section.settings.sec_head }}</h3>
+        <p>{{ section.settings.sec_subhead }}</p>
+        {% if section.settings.shop_btn != blank %}
+          <a class="shop-btn" href="{{ section.settings.shop_btn_url }}">
+            {{ section.settings.shop_btn }}
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+  <div class="right-side-container">
+    {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product_item] %}
+        <div class="product-card">
+          <a href="{{ product.url }}">
+            <img src="{{ product.featured_image | img_url: 'master' }}"  border="0" />
+            <h4>{{ product.title }}</h4>
+          </a>
+        </div>
+      {% endfor %}
+  </div>
+</div>
+{% if section.settings.section.settings.shop_all != blank %}
+<a class="shop-all-btn" href="{{ section.settings.shop_all_url }}">
+    {{ section.settings.shop_all }}
+</a>
+{% endif %}
+{% schema %}
+{
+  "name": "Four Products and Image",
+  "class": "four-products-image", 
+  "settings": [
+  {
+    "type": "text",
+    "id": "main_head",
+    "label": "Section Heading"
+  },
+  {
+    "type": "text",
+    "id": "main_subhead",
+    "label": "Section Sub Heading"
+  },
+  {
+    "type": "image_picker",
+    "id": "cartoon_img",
+    "label": "Cartoon Image"
+  },    
+  {
+    "type": "image_picker",
+    "id": "left_img",
+    "label": "Side Image"
+  },
+  {
+    "type": "text",
+    "id": "sec_head",
+    "label": "Heading"
+  },
+  {
+    "type": "text",
+    "id": "sec_subhead",
+    "label": "Sub Heading"
+  },
+  {
+    "type": "text",
+    "id": "shop_btn",
+    "label": "Shop Btn Text"
+  },
+  {
+    "type": "text",
+    "id": "shop_btn_url",
+    "label": "Shop Btn URL"
+  },
+  {
+    "type": "text",
+    "id": "shop_all",
+    "label": "Shop All Btn Text"
+  },
+  {
+    "type": "text",
+    "id": "shop_all_url",
+    "label": "Shop All URL"
+  }
+  ] ,
+  "blocks": [
+  {
+	"type": "card",
+	"name": "Product card",
+	"settings": [
+	  {
+	    "type": "product",
+		"id": "product_item",
+		"label": "Choose the product you want displayed"
+	  }
+      ]
+  }
+  ] ,
+  "presets": [
+  {
+    "name": "Four Products and Image"
+  }
+  ]
+}
+{% endschema %}

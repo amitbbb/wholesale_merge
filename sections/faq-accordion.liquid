@@ -1,0 +1,51 @@
+{% if section.settings.sec_head != blank %}
+<div class="info-accordion">
+  <h2>{{ section.settings.sec_head }}</h2>
+  <ul class="infoList">
+    {% for block in section.blocks %}
+    <li>
+      <h3 class="infoTitle {% if forloop.first %}active{% endif %}">{{ block.settings.acc_heading }}</h3>
+      <div class="infoText" style="{% if forloop.first %}display: block;{% else %}display: none;{% endif %}">
+        {{ block.settings.acc_text }}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{% schema %}
+{
+  "name": "FAQ Accordion",
+  "class": "accordion-faq",  
+  "settings": [
+  {
+    "type": "text",
+    "id": "sec_head",
+    "label": "Heading"
+  }   
+  ],
+  "blocks": [
+  {
+	"type": "accordion",
+	"name": "Accordion",
+	"settings": [
+        {
+          "type": "text",
+          "id": "acc_heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "acc_text",
+          "label": "Text"
+        }
+      ]
+  }
+  ] ,
+  "presets": [
+  {
+    "name": "FAQ Accordion"
+  }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,48 @@
+{% if section.settings.sec_head != blank %} 
+<div class="nav-head">
+  <div class="collection-nav collection-all">
+          <ul>
+              <li class="heading">{{ section.settings.sec_head }}</li>
+            {% for block in section.blocks %}
+              <li class=""><a href="{{ block.settings.tab_url }}">{{ block.settings.tab_text }}</a></li>
+            {% endfor %}
+          </ul>
+  </div>
+</div>
+{% endif %}
+{% schema %}
+{
+  "name": "Header Tabs",
+  "class": "landing-header-tabs",  
+  "settings": [
+  {
+    "type": "text",
+    "id": "sec_head",
+    "label": "Heading"
+  }
+  ],
+  "blocks": [
+  {
+	"type": "tabs",
+	"name": "Tabs",
+	"settings": [
+	    {
+          "type": "text",
+          "id": "tab_text",
+          "label": "Tabs Text"
+        },
+        {
+          "type": "text",
+          "id": "tab_url",
+          "label": "Tab URL"
+        }     
+      ]
+  }
+  ] ,
+  "presets": [
+  {
+    "name": "Header Tabs"
+  }
+  ]
+}
+{% endschema %}

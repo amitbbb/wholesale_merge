@@ -1,0 +1,106 @@
+<!-- COLLECTION SIDEBAR -->
+    {%- capture categories -%}
+  {%- for tag in collections[collection.handle].tags -%}
+    {%- if tag contains 'categories' -%}
+      {%- assign tag_patterns = tag | split: '_' -%}
+
+      <li class="collection-sidebar__filter-item main-filter" data-tag="{{ tag | handle }}">{{ tag_patterns[1] }}</li>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- capture filters -%}
+  {%- assign filter_title = '' -%}
+  {%- assign div_opened = 0 -%}
+  {%- assign div_closed = 0 -%}
+
+  {%- for tag in collection.all_tags -%}
+    {%- unless tag contains 'categories' or tag contains 'display' -%}
+      {%- assign tag_patterns = tag | split: '_' -%}
+      {%- assign heading = tag_patterns[0] -%}
+      {%- assign value = tag_patterns[1] -%}
+
+      {%- if value != blank -%}
+
+        {%- if heading != filter_title -%}
+          {%- if filter_title != blank -%}
+            </ul>
+            </div>
+
+            {%- assign div_closed = div_closed | plus: 1 -%}
+          {%- endif -%}
+
+          <div class="collection-sidebar__additional-filter" data-filter="{{ tag_patterns[0] }}">
+            {% assign filterTitle = heading | downcase %}
+            <h3 class="collection-sidebar__filter-title accordion-heading">{% if filterTitle == 'type' %}PRODUCT Type{% else %}By {{ heading }}{% endif %} <i class="fa fa-plus" aria-hidden="true"></i></h3>
+            <ul class="collection-sidebar__filter-items accordion-content">
+
+          {%- assign filter_title = heading -%}
+          {%- assign div_opened = div_opened | plus: 1 -%}
+        {%- endif -%}
+
+              <li class="collection-sidebar__filter-item" data-tag="{{ tag | handle }}"><span class="checkbox"></span>{{ tag_patterns[1] }}</li>
+      {%- endif -%}
+    {%- endunless -%}
+  {%- endfor -%}
+
+  {%- if div_opened != div_closed -%}
+     </ul>
+     </div>
+  {%- endif -%}
+
+{% if collection.metafields.collection_nav.nav_item != blank %}
+  <div class="collection-sidebar__additional-filter" data-filter="Ingredients">
+     <h3 class="collection-sidebar__filter-title accordion-heading">Links <i class="fa fa-plus" aria-hidden="true"></i></h3>
+     <ul class="collection-sidebar__filter-items accordion-content left0">
+            {%assign colls = collection.metafields.collection_nav.nav_item | split:'|' %}
+            {% for hand in colls %}
+            {% assign coll = collections[hand] %}
+            <li class="collection-sidebar__filter-item {% if collection.handle == hand %}active{% endif %}"><a href="{{coll.url}}">{{coll.title}}</a></li>
+            {%endfor%}
+     </ul>
+  </div>
+{%endif%}
+
+
+{%- endcapture -%}
+
+
+{%- if categories != blank or filters != blank -%}
+  <section class="collection-sidebar" data-collection-url="https://{{ shop.domain }}{{ collection.url }}" data-section-id="collection-sidebar" data-section-type="collection-sidebar">
+    {% comment %}
+    <h3 class="collection-sidebar__heading accordion-heading">Filter By <img src="{{ 'arrowDown.png' | asset_url }}" class="mobileContent" alt="arrowDown"></h3>
+	
+    
+    <div class="collection-sidebar__additional-filter">
+      <h3 class="collection-sidebar__filter-title accordion-heading">Sort By</h3>
+      <ul class="collection-sidebar__filter-items sort-items accordion-content">
+        <li class="collection-sidebar__sort-item">
+          {% include 'custom-sort' %}
+        </li>
+      </ul>
+    </div>
+    {% endcomment %}
+    
+    <div class="collection-sidebar__content accordion-content">
+      {%- if categories != blank -%}
+        <div class="collection-sidebar__categories-filter">
+          <h3 class="collection-sidebar__filter-title">Categories</h3>
+          <ul class="collection-sidebar__filter-items">
+            {{ categories }}
+          </ul>
+        </div>
+      {%- endif -%}
+
+      {%- if filters != blank -%}
+      {% comment %}
+        <h3 class="collection-sidebar__filter-heading">Refine your selection</h3>
+      {% endcomment %}
+        {{ filters }}
+      {%- endif -%}
+    </div>
+  </section>
+
+
+{%- endif -%}
+    <!-- COLLECTION SIDEBAR END -->

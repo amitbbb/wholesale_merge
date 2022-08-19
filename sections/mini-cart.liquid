@@ -1,0 +1,319 @@
+{% comment %}
+Add section mini-cart.liquid and copy paste below code. Then incude that secton to theme.liquid
+{% endcomment %}
+{% assign customer_tags = customer.tags | downcase | join: ", "  %}
+
+
+
+
+
+{% raw %}
+<script type="tmpl" id='minicart-template'>
+  <button class="closeMiniCart">
+  <!--
+    	<svg width="10" viewBox="0 0 10 10"><path d="M9.677 8.118a1.102 1.102 0 11-1.559 1.56L5 6.558 1.882 9.677a1.102 1.102 0 11-1.56-1.559L3.442 5 .323 1.882A1.102 1.102 0 111.882.322L5 3.442 8.118.323a1.102 1.102 0 111.56 1.559L6.558 5l3.118 3.118z" fill="#A1A1A1" fill-rule="nonzero"></path></svg>
+   -->
+   x
+  	</button>
+    
+  <header class="header">
+  	<h2>Your Cart       <!--	 <span class="cart-count"><%= cart.item_count %></span>		-->		</h2>
+  	<a href="/collections/all" class="underlined-link">continue shopping</a>
+  </header>
+  
+  
+  
+  <div class="items">
+  <% _.each(cart.items, function(item, index) { %>
+    <div class="item" data-pid="<%= item.id %>">
+      <div class="image">
+        <a href="<%= item.url %>"><img src="<%= item.image %>" /></a>
+      </div>
+      <div class="main">
+      <div class="main-top">
+          <div class="main-top-left">
+            <div class="item-title">
+              <h3 class="title"><a href="<%= item.url %>"><%- item.product_title %></a></h3>
+              <p class="variants-p"><%- item.variant_title %></p>
+              <p class="mini-price">
+                <!-- <span class="money item-price price" data-product-id="<%= item.id %>">
+                  <%= item.price %>
+                </span> -->
+                <span class="money item-price price" data-line-total data-line-index="<%= index %>">
+                  <%= item.price %>
+                </span>
+            </p>
+            </div> 
+          </div>
+          
+          <button class="remove" data-pid="<%= item.id %>">
+          	<svg width="9" viewBox="0 0 10 10"><path d="M9.677 8.118a1.102 1.102 0 11-1.559 1.56L5 6.558 1.882 9.677a1.102 1.102 0 11-1.56-1.559L3.442 5 .323 1.882A1.102 1.102 0 111.882.322L5 3.442 8.118.323a1.102 1.102 0 111.56 1.559L6.558 5l3.118 3.118z" fill="#1b4388" fill-rule="nonzero"></path></svg>
+  		  </button>
+        </div>
+ <!--       <p class="mini-cart-description"><%- item.product_description %></p>	-->
+        
+        <div class="main-bottom">
+          <div class="quantity-selector1">
+          <label>Quantity</label>
+          <span style="display:none" class="miniItemQty" data-val="<%= item.quantity %>"></span>
+          <!--select class="qtySelector" data-pid="<%= item.id %>">
+          	<option value="0">0</option>
+          	<option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+  		  </select-->
+          
+          <input type="text" class="qtySelector" value="<%= item.quantity %>" data-pid="<%= item.id %>">
+          <button class="updateQuantity" data-pid="<%= item.id %>" title="Update"></button>
+          <!--button class="minus1" data-pid="<%= item.id %>">
+              <svg width="10" viewBox="0 0 12 2" xmlns="http://www.w3.org/2000/svg"><path d="M11.25 0H.75C.3 0 0 .4 0 1s.3 1 .75 1h10.5c.45 0 .75-.4.75-1s-.3-1-.75-1z" fill="#7A7A7A" fill-rule="nonzero"></path></svg>
+          </button>
+
+          <input type="text" id="itemQty" value="<%= item.quantity %>">
+          
+			
+          <button class="plus1" data-pid="<%= item.id %>">
+              <svg width="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M11 5H7V1a1 1 0 00-2 0v4H1a1 1 0 000 2h4v4a1 1 0 002 0V7h4a1 1 0 000-2z" fill="currentColor" fill-rule="nonzero"></path></svg>
+          </button-->
+        </div>
+
+<!--
+          <span class="item-price price"><%= item.price %></span>
+          -->
+  	</div>
+   
+
+    <ul class="item-properties">
+      <% _.each(item.properties, function(property, index) { %>
+        <li class="item-properties__item">*<%= property %></li>
+      <% }); %> 
+      </ul>
+      
+        
+      </div>
+<hr class="item-line">
+    </div>	
+  <% }); %>
+  </div>
+  
+  <!--div class="subtotal">
+    <strong>Subtotal </strong>
+    <strong class="amount price">
+      <span class="money" data-cart-total>
+        <%= cart.total_price %>
+      </span>
+    </strong>
+  </div>
+  
+  <div class="buttons">
+    <a href="/cart">View Cart</a>
+    <a class="checkout" href="/checkout">Checkout</a>
+  </div-->
+  
+  
+	<!--div class="upContainer"></div-->
+	<footer class="footer">
+<!--    
+      <div class="footer-row">
+          <span>Shipping</span>
+          <span class="shipping-cost">Calculated at checkout</span>
+      </div>
+-->     
+      <div class="footer-row mini-tot">
+          <strong>Subtotal</strong>
+          <!-- <strong class="subTotalText">
+            <%= cart.total_price %>
+          </strong> -->
+            <span class="money subTotalText" data-cart-total>
+              <%= cart.total_price %>
+            </span>
+      </div>
+      
+	<p class="js-wholesale-error" style="font-size:12px"></p>
+    <a class="button full js-checkout-btn" href="/checkout">Proceed to checkout</a>
+    
+   
+	</footer>
+
+
+</script>
+{% endraw %}
+
+{% comment %}
+<div class="upsellContainer">
+
+<div class="upsells">
+  	<div class="upsell">
+    	
+        {% assign upsellProduct = '' %}
+        	{% for item in cart.items %}
+            	{% assign item1 = item.product.title %}
+         
+                {% assign item1 = all_products[item1] %}
+          
+				 
+                
+                {%if item1.metafields.upsale_1.c_f != blank %}
+                	{% assign upsellProduct = item1 %}
+                    
+                    {% break %}
+                
+                {% endif %}
+            
+            {% endfor %}
+          
+            
+          {% if upsellProduct != '' %}
+          
+          	{% assign pd_1 =  upsellProduct.metafields.upsale_1.c_f %}
+            {% assign pd_1 = pd_1 | strip | handle %}
+
+           {% if pd_1 != blank %}
+              
+              {% assign pd_1 = all_products[pd_1] %}
+      <div class="upsell-item">
+        	<div class="upsell-image">
+              <img src="{{ pd_1.featured_image | img_url : '100x100' }}" alt="#">
+        	</div>
+        <div class="upsell-text">
+          <h3>{{ pd_1.title }}</h3>
+          <div class="upsell-text-prices">
+            <p>{{ pd_1.price | money }}</p>
+          </div>
+          
+        </div>
+        <div class="upsell-add">
+          <button id="addUpsell" data-pid="{{ pd_1.selected_or_first_available_variant.id }}">Add</button>
+        </div>
+        
+        
+      </div>
+  
+           {% endif %}
+      
+      {% assign pd_1 =  upsellProduct.metafields.upsale_2.c_f %}
+            {% assign pd_1 = pd_1 | strip | handle %}
+
+           {% if pd_1 != blank %}
+              
+              {% assign pd_1 = all_products[pd_1] %}
+      <div class="upsell-item">
+        	<div class="upsell-image">
+              <img src="{{ pd_1.featured_image | img_url : '100x100' }}" alt="#">
+        	</div>
+        <div class="upsell-text">
+          <h3>{{ pd_1.title }}</h3>
+          <div class="upsell-text-prices">
+            <p>{{ pd_1.price | money }}</p>
+          </div>
+          
+        </div>
+        <div class="upsell-add">
+          <button id="addUpsell" data-pid="{{ pd_1.selected_or_first_available_variant.id }}">Add</button>
+        </div>
+        
+        
+      </div>
+  
+           {% endif %}
+      
+      
+      {% assign pd_1 =  upsellProduct.metafields.upsale_3.c_f %}
+            {% assign pd_1 = pd_1 | strip | handle %}
+
+           {% if pd_1 != blank %}
+              
+              {% assign pd_1 = all_products[pd_1] %}
+      <div class="upsell-item">
+        	<div class="upsell-image">
+              <img src="{{ pd_1.featured_image | img_url : '100x100' }}" alt="#">
+        	</div>
+        <div class="upsell-text">
+          <h3>{{ pd_1.title }}</h3>
+          <div class="upsell-text-prices">
+            <p>{{ pd_1.price | money }}</p>
+          </div>
+          
+        </div>
+        <div class="upsell-add">
+          <button id="addUpsell" data-pid="{{ pd_1.selected_or_first_available_variant.id }}">Add</button>
+        </div>
+        
+        
+      </div>
+  
+           {% endif %}
+      
+      {% assign pd_1 =  upsellProduct.metafields.upsale_4.c_f %}
+            {% assign pd_1 = pd_1 | strip | handle %}
+
+           {% if pd_1 != blank %}
+              
+              {% assign pd_1 = all_products[pd_1] %}
+      <div class="upsell-item">
+        	<div class="upsell-image">
+              <img src="{{ pd_1.featured_image | img_url : '100x100' }}" alt="#">
+        	</div>
+        <div class="upsell-text">
+          <h3>{{ pd_1.title }}</h3>
+          <div class="upsell-text-prices">
+            <p>{{ pd_1.price | money }}</p>
+          </div>
+          
+        </div>
+        <div class="upsell-add">
+          <button id="addUpsell" data-pid="{{ pd_1.selected_or_first_available_variant.id }}">Add</button>
+        </div>
+        
+        
+      </div>
+  
+           {% endif %}
+      
+          
+          
+          
+          
+          {% endif %}
+            
+            
+        
+    </div>
+  
+  </div>
+</div>
+{% endcomment %}
+
+<div id="mini-cart"
+{% if section.settings.freeshipPrice != blank %} 
+  data-freeship-threshold="
+  {%- if customer_tags contains "wholesale" -%}0{%- else -%}{{section.settings.freeshipPrice}}{%- endif -%}
+  "
+{% endif %}></div>
+<div id="wk_order_gift" data-total-price="{{ cart.total_price }}"></div>
+
+{% schema %}
+  {
+    "name": "Mini Cart",
+    "settings": [
+	  {
+		"type": "text",
+		"id": "freeshipPrice",
+		"label": "Free shipping threshold amount"
+	  }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

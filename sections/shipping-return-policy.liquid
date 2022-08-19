@@ -1,0 +1,50 @@
+ <div class="shipping-return-wrapper">
+   <div class="shipping-banner">
+     <h1>{{ section.settings.heading }}</h1>
+   </div>
+   <div class="page_content">
+     <h3>{{ section.settings.ship_head }}</h3>
+     {{ section.settings.ship_text }}
+
+     <h3>{{ section.settings.return_head }}</h3>
+     {{ section.settings.return_text }}
+   </div>
+ </div>
+{% schema %}
+{
+  "name": "Shipping Return",
+  "class": "shipping-return",  
+  "settings": [
+  {
+    "type": "text",
+    "id": "heading",
+    "label": "Heading"
+  },
+  {
+    "type": "text",
+    "id": "ship_head",
+    "label": "Shipping Heading"
+  },
+  {
+    "type": "richtext",
+    "id": "ship_text",
+    "label": "Shipping Text"
+  },
+  {
+    "type": "text",
+    "id": "return_head",
+    "label": "Return Heading"
+  },
+  {
+    "type": "richtext",
+    "id": "return_text",
+    "label": "Return Text"
+  }    
+  ],
+  "presets": [
+  {
+    "name": "Shipping Return"
+  }
+  ]
+}
+{% endschema %}

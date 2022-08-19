@@ -1,0 +1,75 @@
+<div class="cell-tab_main">
+  
+    <div class="cell-tab_main_left">
+      {% for block in section.blocks %}
+      {% if block.settings.text != blank and block.type == 'celltab' %}
+      <div class="box">
+        <img src="{{block.settings.img | img_url: 'original' }} "> 
+          <div class="acc_txt">
+            <span class="acc_txt_txt">{{ block.settings.text }}</span>
+          </div>
+        </div>
+
+      {% endif %}
+      {% endfor %}
+
+    </div>
+
+  
+
+  <div class="cell-tab_main_right">
+      {% if section.settings.heading != blank%}
+        <h2>{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subheading != blank%}
+        <div class="cell_tab_text">{{ section.settings.subheading }}</div>
+      {% endif %}
+  </div>
+
+</div>
+</div>
+
+
+{% schema %}
+{
+"name": "Cell Tab",
+"tag": "section",
+"class": "spaced-section",
+"settings": [
+{
+  "type": "text",
+  "id": "heading",
+  "label": "Heading"  
+},
+{
+  "type": "richtext",
+  "id": "subheading",
+  "label": "Text"  
+}
+],
+"blocks": [
+{
+  "type": "celltab",
+  "name":"CellTab",
+  "settings": [
+  {
+"type": "image_picker",
+"id": "img",
+"label": "Image Icon"
+},
+{
+  "type": "text",
+  "id": "text",
+  "label": "Icon Text"
+  }
+  
+  ]
+}
+],
+"presets": [
+{
+"name": "Cell Tab"
+}
+]
+}
+{% endschema %}

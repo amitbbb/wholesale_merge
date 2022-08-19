@@ -1,0 +1,213 @@
+{
+  "current": {
+    "colors_solid_button_labels": "#ffffff",
+    "colors_accent_1": "#1b4388",
+    "colors_accent_2": "#1b4388",
+    "colors_text": "#1b4388",
+    "colors_outline_button_labels": "#121212",
+    "colors_background_1": "#ffffff",
+    "colors_background_2": "#f3f3f3",
+    "type_header_font": "assistant_n4",
+    "type_body_font": "assistant_n4",
+    "social_twitter_link": "https:\/\/twitter.com\/hylandsnaturals",
+    "social_facebook_link": "https:\/\/www.facebook.com\/HylandsNaturals",
+    "social_instagram_link": "https:\/\/www.instagram.com\/hylandsnaturals\/",
+    "social_youtube_link": "",
+    "favicon": "shopify:\/\/shop_images\/Favicon_1.png",
+    "checkout_customization": true,
+    "checkout_logo_image": "shopify:\/\/shop_images\/Header-svg_200x_2x_5f933d5a-c981-492c-b456-9c1a828677dc.png",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "text": "Orders $25+ eligible for free shipping",
+              "text2": "Sign up for 20% off!",
+              "color_scheme": "accent-2",
+              "link": "#",
+              "link2": ""
+            }
+          },
+          "f955125a-8b69-4343-a45a-9b1ea6b6f857": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "For a VERY limited time, get a FREE bottle of Bioplasma with every purchase! (Retail only, ends 4\/28\/22).",
+              "text2": "Welcome to our store",
+              "color_scheme": "accent-1",
+              "link": "",
+              "link2": ""
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0",
+          "f955125a-8b69-4343-a45a-9b1ea6b6f857"
+        ],
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "dae9d9c1-7111-4bf3-b9b7-0b29e797128f": {
+            "type": "mega_menu",
+            "settings": {
+              "menu_rel": "Shop",
+              "menu_label": "SHOP CELL SALTS",
+              "menu_link": "shopify:\/\/collections\/cell-salts"
+            }
+          }
+        },
+        "block_order": [
+          "dae9d9c1-7111-4bf3-b9b7-0b29e797128f"
+        ],
+        "settings": {
+          "color_scheme": "background-1",
+          "logo": "shopify:\/\/shop_images\/logo.png",
+          "logo_width": 140,
+          "logo_position": "middle-left",
+          "menu": "",
+          "show_line_separator": true,
+          "enable_sticky_header": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-1": {
+            "type": "text",
+            "settings": {
+              "heading": "Join Hyland’s community",
+              "subtext": "<p>Sign up for updates<\/p>"
+            }
+          },
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "About",
+              "menu": ""
+            }
+          },
+          "6e3bf290-289a-411f-9bf5-c5483e64fdbe": {
+            "type": "link_list",
+            "settings": {
+              "heading": "HELP",
+              "menu": ""
+            }
+          },
+          "749a70e8-ab17-4002-ab44-d4669f072165": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/logo.png",
+              "para": "Some of our products based on traditional homeopathic practice have not been evaluated by the FDA and are not intended to diagnose, treat, cure or prevent any disease.",
+              "image_width": 200,
+              "alignment": "center"
+            }
+          }
+        },
+        "block_order": [
+          "footer-1",
+          "footer-0",
+          "6e3bf290-289a-411f-9bf5-c5483e64fdbe",
+          "749a70e8-ab17-4002-ab44-d4669f072165"
+        ],
+        "settings": {
+          "color_scheme": "background-1",
+          "newsletter_enable": true,
+          "newsletter_heading": "Subscribe to our emails",
+          "show_social": true,
+          "enable_country_selector": false,
+          "enable_language_selector": true,
+          "payment_enable": false,
+          "link": "",
+          "tou": "",
+          "link2": "",
+          "assess": ""
+        }
+      },
+      "mini-cart": {
+        "type": "mini-cart",
+        "settings": {
+          "freeshipPrice": "25"
+        }
+      },
+      "email-popup": {
+        "type": "email-popup",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
+  "presets": {
+    "Default": {
+      "colors_solid_button_labels": "#FFFFFF",
+      "colors_accent_1": "#121212",
+      "colors_accent_2": "#334FB4",
+      "colors_text": "#121212",
+      "colors_outline_button_labels": "#121212",
+      "colors_background_1": "#FFFFFF",
+      "colors_background_2": "#F3F3F3",
+      "type_header_font": "assistant_n4",
+      "type_body_font": "assistant_n4",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-bar-0": {
+              "type": "announcement",
+              "settings": {
+                "color_scheme": "background-1"
+              }
+            }
+          },
+          "block_order": [
+            "announcement-bar-0"
+          ],
+          "settings": {
+          }
+        }
+      }
+    },
+    "Craft": {
+      "colors_solid_button_labels": "#EFECEC",
+      "colors_accent_1": "#2A332F",
+      "colors_accent_2": "#476154",
+      "colors_text": "#1C1A1A",
+      "colors_outline_button_labels": "#7B8382",
+      "colors_background_1": "#EFECEC",
+      "colors_background_2": "#C1BCAE",
+      "type_header_font": "americana_n4",
+      "type_body_font": "quattrocento_sans_n4",
+      "sections": {
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu": {
+              "type": "link_list",
+              "settings": {
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "menu",
+            "text"
+          ],
+          "settings": {
+            "color_scheme": "accent-1"
+          }
+        }
+      }
+    }
+  }
+}

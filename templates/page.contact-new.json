@@ -1,0 +1,41 @@
+{
+  "sections": {
+    "1659702663b3ca9200": {
+      "type": "hero-banner",
+      "settings": {
+        "hero_img": "shopify:\/\/shop_images\/download_d04ca5ab-a0f4-4333-b963-8b50f7f17613.png",
+        "hero_mobile": "shopify:\/\/shop_images\/download_1.png",
+        "hero_heading": "Contact us",
+        "hero_sub_heading": "How can we help you?",
+        "hero_button": "",
+        "hero_btn_url": "",
+        "hero_btn_color": "",
+        "hero_btn_h_color": ""
+      }
+    },
+    "1659703342e3be8962": {
+      "type": "banner-marquee",
+      "settings": {
+        "marquee": "COLD & COUGH • <a href=\"https:\/\/hylands.com\/\">PAIN RELIEF<\/a> • TEETHING • EARACHE • CALMING • SLEEP • STRESS • MUSCLE PAIN • LEG PAIN • TUMMY ACHE • DIGESTION • ALLERGIES • SKIN • WORKOUT RECOVERY"
+      }
+    },
+    "1659705174ada1c2dc": {
+      "type": "contact-new",
+      "settings": {
+        "heading": "We’re available by chat and email.",
+        "icon1": "shopify:\/\/shop_images\/Chat.png",
+        "chat": "Chat with us",
+        "chat1": "Click the Chat Icon",
+        "chat1url": "",
+        "icon2": "shopify:\/\/shop_images\/Email.png",
+        "email": "Email Us",
+        "email1": "care@hylands.com"
+      }
+    }
+  },
+  "order": [
+    "1659702663b3ca9200",
+    "1659703342e3be8962",
+    "1659705174ada1c2dc"
+  ]
+}

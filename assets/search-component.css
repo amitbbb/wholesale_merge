@@ -1,0 +1,38 @@
+.search-component {
+
+}
+
+.search-component__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.search-component__image {
+  transition: transform var(--duration-long) ease;
+  height: 33vw;
+  object-fit: cover;
+}
+
+.search-component__image:hover {
+  transform: scale(1.03);
+}
+
+.search-component__description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid #1b4388;
+  cursor: pointer;
+  min-height: 55px;
+}
+
+.search-component__product-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: Gotham;
+  color: #1b4388;
+}

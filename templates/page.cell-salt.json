@@ -1,0 +1,143 @@
+{
+  "wrapper": "div.cell-salt-templete",
+  "sections": {
+    "main": {
+      "type": "hero-banner",
+      "settings": {
+        "hero_img": "shopify:\/\/shop_images\/download.jpg",
+        "hero_heading": "Explore our signature cell salts.",
+        "hero_sub_heading": "Take a look at what makes cell salts a must-have for your everyday wellness.",
+        "hero_button": "",
+        "hero_btn_url": "",
+        "hero_btn_color": "",
+        "hero_btn_h_color": ""
+      }
+    },
+    "166002976881b13256": {
+      "type": "banner-marquee",
+      "settings": {
+        "marquee": "&nbsp;"
+      }
+    },
+    "166004344774c96617": {
+      "type": "cell-tab",
+      "blocks": {
+        "dcd85cd1-a690-4916-8122-b721ae2b01c3": {
+          "type": "celltab",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/download_1.jpg",
+            "text": "MADE IN USA"
+          }
+        },
+        "ba7e412c-2eeb-4e6c-b3df-b7c728c51b63": {
+          "type": "celltab",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/download_615610b6-22b3-426c-8c4d-943b84d47a1a.png",
+            "text": "VEGAN"
+          }
+        },
+        "cd892d72-7cb4-4c85-9d92-c29851a59d46": {
+          "type": "celltab",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/download_1_e80642cd-4d8a-4b29-bc02-8b17ad83c0c7.png",
+            "text": "ALLERGEN FREE"
+          }
+        },
+        "c1a97e19-7050-473b-b945-1004ca854f71": {
+          "type": "celltab",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/download_2.png",
+            "text": "CRUELTY FREE"
+          }
+        },
+        "41afb158-2552-4c65-9e7e-4d3a17b16276": {
+          "type": "celltab",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/download_3.png",
+            "text": "NO ARTIFICIAL FLAVORS\/DYES"
+          }
+        },
+        "ee4e81bb-3c3a-4bd7-bdc5-4a11cb06686f": {
+          "type": "celltab",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/download_4.png",
+            "text": "GLUTEN FREE"
+          }
+        },
+        "c0eb27b0-d81d-4ec6-ba93-3ec42993d5f9": {
+          "type": "celltab",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/download_5.png",
+            "text": "PARABEN FREE"
+          }
+        },
+        "7f03ff64-7111-48d8-9cc3-9f69240d08e8": {
+          "type": "celltab",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/download_6.png",
+            "text": "ALCOHOL FREE"
+          }
+        }
+      },
+      "block_order": [
+        "dcd85cd1-a690-4916-8122-b721ae2b01c3",
+        "ba7e412c-2eeb-4e6c-b3df-b7c728c51b63",
+        "cd892d72-7cb4-4c85-9d92-c29851a59d46",
+        "c1a97e19-7050-473b-b945-1004ca854f71",
+        "41afb158-2552-4c65-9e7e-4d3a17b16276",
+        "ee4e81bb-3c3a-4bd7-bdc5-4a11cb06686f",
+        "c0eb27b0-d81d-4ec6-ba93-3ec42993d5f9",
+        "7f03ff64-7111-48d8-9cc3-9f69240d08e8"
+      ],
+      "settings": {
+        "heading": "Our cell salt tablets are made with key minerals to keep you healthy.",
+        "subheading": "<p>Each is derived from one of the 12 inorganic mineral compounds that are most important to our cellular health.<\/p><p>By working to stimulate the body’s natural healing mechanisms, cell salts help restore cell functions, bring health to muscle tissue, and balance the body.<\/p>"
+      }
+    },
+    "1660053120b89bc689": {
+      "type": "cell-salt-image-with-text",
+      "settings": {
+        "text": "Each quick-dissolving tablet is a convenient remedy to support wellness.",
+        "subheading": "<p>Our tablets are formulated in homeopathic microdoses, making them safe for the whole family, including children two years old and older.<\/p><p>You can even bring wellness on the go! A single dose of any one Hyland’s Cell Salts can be added to your or your child’s water bottle and sipped throughout the day.<\/p>",
+        "img": "shopify:\/\/shop_images\/download_1_ead5b059-a8bc-4a6a-ba60-0145e0dcf2ca.jpg"
+      }
+    },
+    "1660053168dfe9f91e": {
+      "type": "cell-salt-customer",
+      "blocks": {
+        "b8d47c5b-1528-4571-8832-6344624dc024": {
+          "type": "customer",
+          "settings": {
+            "name": "Life changing!",
+            "img": "shopify:\/\/shop_images\/download_7d1fe47b-e5aa-437a-8b09-d27baf729d50.jpg",
+            "text": "<p>I was looking for something to help with the brutal headaches I have. I had realized the connection between dehydration and my headaches. A store employee recommended Bioplasma. For nine out of ten headaches, Bioplasma ends it in a few minutes. I will now use them daily. Thank you<\/p>",
+            "mainname": "<p>Davetta301 on<strong> Bioplasma<\/strong><\/p>"
+          }
+        },
+        "c0b21512-a01e-4487-89bf-e472c4ca92b0": {
+          "type": "customer",
+          "settings": {
+            "name": "Love!",
+            "img": "shopify:\/\/shop_images\/download_7d1fe47b-e5aa-437a-8b09-d27baf729d50.jpg",
+            "text": "<p>I have had a HUGE breakout since December with painful skin eruptions on my chin and nose with no relief no matter what I tried. My friend told me about cell salts and looked it up. I ordered this product and tried the max dosage. Within a week my face was clear! It’s literally a miracle! So happy with this product!<\/p>",
+            "mainname": "<p>Shannonon<strong>Cell Salt #7<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "b8d47c5b-1528-4571-8832-6344624dc024",
+        "c0b21512-a01e-4487-89bf-e472c4ca92b0"
+      ],
+      "settings": {
+        "heading": "Customers love our cell salts!"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "166002976881b13256",
+    "166004344774c96617",
+    "1660053120b89bc689",
+    "1660053168dfe9f91e"
+  ]
+}

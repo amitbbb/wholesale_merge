@@ -1,0 +1,85 @@
+{% if section.settings.sec_head != blank %} 
+<div class="popular-cards">
+  <h2>{{ section.settings.sec_head }}</h2>
+  <p>{{ section.settings.sec_subhead }}</p>
+  <div class="popular-cards-slider">
+      {% for block in section.blocks %}
+      <div class="popular-cards">
+        {%- if block.settings.best_seller -%}
+            <div class="best-seller-badge">Best Seller</div>
+        {% endif %}
+            <a href="{{ block.settings.btn_url }}">
+              <img src="{{ block.settings.prod_img | img_url: 'master' }}" alt="" />
+              <h3>{{ block.settings.btn_label }}</h3>
+            </a>
+      </div>
+     {% endfor %}
+  </div>
+</div>
+{% if section.settings.shop_all != blank %} 
+<a class="shop-all-btn" href="{{ section.settings.shop_all_url }}">
+    {{ section.settings.shop_all }}
+</a>
+{% endif %}
+{% endif %}
+{% schema %}
+{
+  "name": "Most Popular Cards",
+  "class": "most-popular-cards",
+  "settings": [
+  {
+    "type": "text",
+    "id": "sec_head",
+    "label": "Heading"
+  },
+  {
+    "type": "text",
+    "id": "sec_subhead",
+    "label": "Sub Heading"
+  },    
+  {
+    "type": "text",
+    "id": "shop_all",
+    "label": "Shop All Btn Text"
+  },
+  {
+    "type": "text",
+    "id": "shop_all_url",
+    "label": "Shop All URL"
+  }
+  ] ,
+  "blocks": [
+  {
+	"type": "card",
+	"name": "Slide Card",
+	"settings": [
+        {
+          "type": "checkbox",
+          "id": "best_seller",
+          "label": "Best Seller Badge"
+        },      
+	    {
+          "type": "image_picker",
+          "id": "prod_img",
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "btn_label",
+          "label": "Button Label"
+        },
+        {
+          "type": "text",
+          "id": "btn_url",
+          "label": "Button URL"
+        }      
+      ]
+  }
+  ] ,
+  "presets": [
+  {
+    "name": "Most Popular Cards"
+  }
+  ]
+}
+{% endschema %}

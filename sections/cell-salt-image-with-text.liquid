@@ -1,0 +1,48 @@
+<div class="cell_salt_image_text">
+    <div class="cell_salt_image_text_left">
+        {% if section.settings.text != blank%}
+        <h2>{{section.settings.text}}</h2>
+        {% endif %}
+        
+        {% if section.settings.subheading != blank%}
+        <div class="cell_heading_text">
+            {{section.settings.subheading}}
+        </div>
+        {% endif %}
+    </div>
+    <div class="cell_salt_image_text_right">
+        {% if section.settings.img != blank%}
+        <img src="{{section.settings.img | img_url: 'original'}}">
+        {% endif%}
+    </div>
+</div>
+
+{% schema %}
+{
+"name": "Cell salt image with Text",
+"tag": "section",
+"class": "spaced-section",
+"settings": [
+{
+"type": "text",
+"id": "text",
+"label": "Heading"
+},
+{
+"type": "richtext",
+"id": "subheading",
+"label": "Text"
+},
+{
+"type": "image_picker",
+"id": "img",
+"label": "Image"
+}
+],
+"presets": [
+{
+"name": "Cell salt image with Text"
+}
+]
+}
+{% endschema %}

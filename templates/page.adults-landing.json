@@ -1,0 +1,247 @@
+{
+  "wrapper": "div.adults-landing-templete",
+  "sections": {
+    "16595260681fe87012": {
+      "type": "landing-header-tabs",
+      "blocks": {
+        "0f1e49dd-a106-4f05-9418-2bb6553de9b1": {
+          "type": "tabs",
+          "settings": {
+            "tab_text": "LEG PAIN",
+            "tab_url": "https:\/\/shop.hylands.com\/collections\/adults-leg-pain"
+          }
+        },
+        "df327e62-1ada-4a47-918d-ef94b6de73ec": {
+          "type": "tabs",
+          "settings": {
+            "tab_text": "CELL SALTS",
+            "tab_url": "https:\/\/hylands.com\/collections\/cell-salts"
+          }
+        },
+        "392a77d6-b10c-409a-a200-e3970819e6cd": {
+          "type": "tabs",
+          "settings": {
+            "tab_text": "All ADULTS products",
+            "tab_url": "https:\/\/shop.hylands.com\/collections\/adults"
+          }
+        }
+      },
+      "block_order": [
+        "0f1e49dd-a106-4f05-9418-2bb6553de9b1",
+        "df327e62-1ada-4a47-918d-ef94b6de73ec",
+        "392a77d6-b10c-409a-a200-e3970819e6cd"
+      ],
+      "settings": {
+        "sec_head": "Hyland’s for Adults"
+      }
+    },
+    "main": {
+      "type": "hero-banner",
+      "settings": {
+        "hero_img": "shopify:\/\/shop_images\/banner_e93e0cca-31f2-458b-bfd9-84b108244c00.png",
+        "hero_heading": "Where stress relief is always natural",
+        "hero_sub_heading": "Our Stress Busters gummies are carefully crafted to help you relax and find focus with premium natural ingredients.",
+        "hero_button": "SHOP PRODUCTS",
+        "hero_btn_url": "https:\/\/hylands.com\/products\/stress-busters-gummies",
+        "hero_btn_color": "#FFFFFF",
+        "hero_btn_h_color": "#1b4388"
+      }
+    },
+    "1659526463d940fa4b": {
+      "type": "most-popular-products",
+      "blocks": {
+        "25d80ade-5d0e-4a74-88ac-eb7467546754": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "prod_img": "shopify:\/\/shop_images\/1.png",
+            "btn_label": "IMMUNITY BOOST",
+            "btn_url": "https:\/\/hylands.com\/collections\/adults-gummies"
+          }
+        },
+        "3c0f1666-d4b8-48ac-93a4-3b6c3cc0f835": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "prod_img": "shopify:\/\/shop_images\/2.png",
+            "btn_label": "LEG PAIN",
+            "btn_url": "https:\/\/shop.hylands.com\/collections\/adults-leg-pain"
+          }
+        },
+        "5f49220a-5c19-4753-acf7-4c9422a5eda1": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "prod_img": "shopify:\/\/shop_images\/3.png",
+            "btn_label": "STRESS & SLEEP",
+            "btn_url": "https:\/\/shop.hylands.com\/collections\/stress-sleep"
+          }
+        },
+        "8750a323-9f7c-4a29-8d65-0d93688560d5": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "prod_img": "shopify:\/\/shop_images\/ear.png",
+            "btn_label": "EARACHES",
+            "btn_url": "https:\/\/shop.hylands.com\/collections\/adults-earache"
+          }
+        },
+        "f533453e-bbca-4e04-8f61-5e5750a36e8b": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "prod_img": "shopify:\/\/shop_images\/must.png",
+            "btn_label": "ACTIVE LIFESTYLE",
+            "btn_url": "https:\/\/hylands.com\/collections\/athletes"
+          }
+        },
+        "22de760a-8ec6-4117-9498-35553528c1c9": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "prod_img": "shopify:\/\/shop_images\/6.png",
+            "btn_label": "SMOKING CESSATION",
+            "btn_url": "https:\/\/shop.hylands.com\/collections\/adult-smoking-cessation"
+          }
+        }
+      },
+      "block_order": [
+        "25d80ade-5d0e-4a74-88ac-eb7467546754",
+        "3c0f1666-d4b8-48ac-93a4-3b6c3cc0f835",
+        "5f49220a-5c19-4753-acf7-4c9422a5eda1",
+        "8750a323-9f7c-4a29-8d65-0d93688560d5",
+        "f533453e-bbca-4e04-8f61-5e5750a36e8b",
+        "22de760a-8ec6-4117-9498-35553528c1c9"
+      ],
+      "settings": {
+        "sec_head": "Shop top picks for everyday wellness",
+        "sec_subhead": "No more side effects. Discover natural pain relief and immune support with premium ingredients that are gentle and safe.",
+        "shop_all": "SHOP ALL",
+        "shop_all_url": "https:\/\/shop.hylands.com\/collections\/adults"
+      }
+    },
+    "16595271258a783872": {
+      "type": "four-products-side-image",
+      "blocks": {
+        "bac6e2b5-cdfc-4b1c-b41e-58fbc6b63851": {
+          "type": "card",
+          "settings": {
+            "product_item": "hylands-fever-reducer"
+          }
+        },
+        "310fdb10-d3c0-4360-8e5c-d22c6766cb4d": {
+          "type": "card",
+          "settings": {
+            "product_item": "hylands-migraine-relief"
+          }
+        },
+        "37ed0d7e-961e-45ce-b066-1af9f9526aa7": {
+          "type": "card",
+          "settings": {
+            "product_item": "hylands-pain-relief"
+          }
+        },
+        "eddae7eb-5993-4ded-b3e1-6449a6311361": {
+          "type": "card",
+          "settings": {
+            "product_item": "hylands-backache-relief"
+          }
+        }
+      },
+      "block_order": [
+        "bac6e2b5-cdfc-4b1c-b41e-58fbc6b63851",
+        "310fdb10-d3c0-4360-8e5c-d22c6766cb4d",
+        "37ed0d7e-961e-45ce-b066-1af9f9526aa7",
+        "eddae7eb-5993-4ded-b3e1-6449a6311361"
+      ],
+      "settings": {
+        "main_head": "Kickstart your healthy lifestyle",
+        "main_subhead": "",
+        "left_img": "shopify:\/\/shop_images\/left.png",
+        "sec_head": "Hyland's Natural Pain Relief",
+        "sec_subhead": "",
+        "shop_btn": "SHOP NOW",
+        "shop_btn_url": "https:\/\/shop.hylands.com\/collections\/pain-relief",
+        "shop_all": "SHOP NOW",
+        "shop_all_url": "https:\/\/shop.hylands.com\/collections\/pain-relief"
+      }
+    },
+    "1659527382410262b0": {
+      "type": "image-text-section",
+      "settings": {
+        "badges": "I'M Loved!",
+        "main_head": "You and your family deserve the best",
+        "bodycopy": "<p>Being a mom is the most important job there is, which is why we want to support you and your baby through each and every moment. Whether you're looking for natural baby products, searching for good advice, or just need a pick-me-up, we'll be here to guide you every step of the way.<\/p>",
+        "shop_all": "SHOP PRODUCTS",
+        "shop_all_url": "https:\/\/shop.hylands.com\/collections\/hylands-baby",
+        "right_img": "shopify:\/\/shop_images\/right.png"
+      }
+    },
+    "1659527700ca47e595": {
+      "type": "products-slider",
+      "blocks": {
+        "08a41810-7f57-49a4-bd73-c58a4a4ee712": {
+          "type": "card",
+          "settings": {
+            "best_seller": true,
+            "badges": "I'M NEW!",
+            "product_item": "apple-cider-vinegar-blast"
+          }
+        },
+        "89a4dfdd-41a1-41a8-bc50-bb47c9d1303a": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "badges": "",
+            "product_item": "hylands-leg-cramps-ointment"
+          }
+        },
+        "ea6dbf2d-b926-49ac-942e-211899e4a18f": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "badges": "",
+            "product_item": "hylands-earache-drops"
+          }
+        },
+        "cfa69e8f-3a4b-4826-99ef-a3d5133f9994": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "badges": "",
+            "product_item": "hylands-restful-legs-pm"
+          }
+        },
+        "7c030da1-6ff1-4354-a9b3-6aead2ed8aed": {
+          "type": "card",
+          "settings": {
+            "best_seller": false,
+            "badges": "",
+            "product_item": "organic-elderberry-plus-gummies"
+          }
+        }
+      },
+      "block_order": [
+        "08a41810-7f57-49a4-bd73-c58a4a4ee712",
+        "89a4dfdd-41a1-41a8-bc50-bb47c9d1303a",
+        "ea6dbf2d-b926-49ac-942e-211899e4a18f",
+        "cfa69e8f-3a4b-4826-99ef-a3d5133f9994",
+        "7c030da1-6ff1-4354-a9b3-6aead2ed8aed"
+      ],
+      "settings": {
+        "main_head": "Most popular products",
+        "main_subhead": "",
+        "shop_all": "SHOP ALL",
+        "shop_all_url": "https:\/\/hylands.com\/collections\/hylands-baby"
+      }
+    }
+  },
+  "order": [
+    "16595260681fe87012",
+    "main",
+    "1659526463d940fa4b",
+    "16595271258a783872",
+    "1659527382410262b0",
+    "1659527700ca47e595"
+  ]
+}

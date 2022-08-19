@@ -1,0 +1,247 @@
+.contact_heading
+{
+    margin-left: 42px;
+    margin-right: 42px;
+}
+
+.contact_heading h2 {
+    margin: 0;
+    font-size: 42px;
+    padding: 74px 0 10px;
+    font-weight: bold;
+    max-width: 500px;
+}
+body.contact.new .hero-banner .hero-text-box {
+    background-color: transparent;
+}
+.contact_main .contact_main-inner {
+    padding: 0 200px;
+    margin: 35px 42px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact_main .contact_main-inner .contact-section {
+    padding: 60px 16% 100px;
+    max-width: 50%;
+    background: #f8f7f9;
+}
+body.page.contact.new .hero-banner-main .hero-banner img.hyland_banner_mobile {
+    display: none;
+}
+.contact_main .contact_main-inner .contact-main_div {
+    max-width: calc(50% - 20px);
+    width: 100%;
+    padding: 60px 80px 100px;
+    min-height: 470px;
+    background: #f8f7f9;
+    border: 1px solid #f8f7f9;
+    border-radius: 14px 14px 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact_main .contact_main-inner .contact-main_div img {
+    padding: 20px 0 30px;
+    max-width: 35px;
+}
+
+.contact_main .contact_main-inner .contact-main_div .page-contact_chat p {font-family: Conv_GothamMedium;font-size: 38.5px;font-weight: bold;text-align: left;color: #1b4388;line-height: 52px;margin: 0;}
+
+.contact_main .contact_main-inner .contact-main_div a {
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    font-size: 20.5px;
+    font-weight: 700;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1b4388;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1.4px solid #1b4388;
+    border-radius: 0 0 9px 9px;
+    text-align: center;
+    left: 0;
+}
+.contact_main .contact_main-inner .contact-main_div:hover {
+    background: radial-gradient(circle at 0 -13%,#ffd1fe87,#d5f3eaa8);
+}
+.contact_main .contact_main-inner .contact-main_div:hover a {
+    background: #1b4388;
+    color: #fff;
+}
+body.page.contact.new .hero-marquee {
+    position: relative;
+    top: -12px;
+}
+body.page.contact.new .hero-banner .hero-text-box h1.banner__heading {
+        padding: 10px 0 0;
+}
+body.page.contact.new .hero-banner .hero-text-box p {
+    margin:0;
+    padding: 42px 0 10px;
+    font-size: 22px;
+    letter-spacing: normal;
+    line-height: normal;
+    font-weight: normal;
+    color: #1b4388;
+    font-family: Montserrat;
+}
+
+
+
+body.page.contact.new .shopify-section.spaced-section {
+    margin-top: 0;
+}
+@media (max-width: 1440px){
+    body.page.contact.new .hero-banner .hero-text-box h1.banner__heading
+    {
+        font-size: 70px;
+    }
+
+}
+
+@media (max-width: 1024px){
+    .contact_main .contact_main-inner {
+        margin: 35px 42px 93px;
+        padding: 0 42px;
+    }
+    .contact_main .contact_main-inner .contact-main_div {
+        padding: 60px 30px 100px;
+        min-height: 380px;
+    }
+    body.contact.new .hero-banner .hero-text-box {
+        max-width: 100%;
+        top: 50%;
+    }
+}
+@media (max-width: 835px){
+    body.page.contact .hero-banner-main {
+        padding-top: 0;
+    }
+    body.page.contact.new .hero-marquee .marquee-container {
+        display: block;
+    }
+    body.contact.new .hero-banner .hero-text-box {
+             top: 56%;
+    }
+    body.page.contact.new .hero-banner .hero-text-box p {
+        padding: 12px 0 10px;
+    }
+}
+
+@media (max-width: 768px){
+    .contact_main .contact_main-inner {
+        padding: 0;
+    }
+    .contact_main .contact_main-inner .contact-main_div {
+        padding: 30px 28px 50px;
+        min-height: 224px;
+    }
+    .contact_main .contact_main-inner .contact-main_div .page-contact_chat p {
+        font-size: 28px;
+    }
+    body.contact.new .hero-banner .hero-text-box {
+    max-width: unset;
+    width: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 0;
+    left: 0;
+    margin-left: 85px;
+    position: absolute;
+}
+body.page.contact.new .hero-banner .hero-text-box h1.banner__heading {
+    font-size: 50px;
+}
+body.page.contact.new .hero-banner .hero-text-box p {
+    padding: 12px 0 10px;
+}
+body.contact.new .hero-banner-main {
+    padding-left: 42px;
+    padding-right: 42px;
+    padding-top: 12px;
+}
+body.page.contact.new .hero-banner-main .hero-banner img.hyland_desktop_mobile {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+}
+
+@media (max-width: 767px){
+    .contact_main .contact_main-inner .contact-main_div {
+            width: 100%;
+            padding: 60px 31px;
+            max-width: 100%;
+        }
+        .contact_heading h2 {
+            font-size: 32px;
+            max-width: 100%;
+        }
+        body.contact.new .hero-banner .hero-text-box {
+            background-color: rgba(253, 208, 114, 1);
+            margin-top: 25px;
+        }
+        .contact_main .contact_main-inner {
+                     margin: 30px 19px 93px;
+         
+        }
+        .contact_main .contact_main-inner .page-contact_email.contact-main_div {
+            margin-top: 90px;
+        }
+        body.contact.new .hero-banner .hero-text-box {
+            max-width: 100%;
+            top: 0;
+            transform: translateY(0%);
+            padding-left: 0;
+            left: 0;
+            margin-left: 0;
+            position: unset;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        body.page.contact.new .hero-banner .hero-text-box h1.banner__heading {
+            font-size: 40px;
+            padding: 0 0 4px 32px;
+        }
+        body.page.contact.new .hero-banner .hero-text-box p {
+            margin-left: 32px;
+            margin-right: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: left;
+            font-size: 16px;
+        }
+        body.page.contact.new .contact_heading h2 {
+            font-size: 30px;
+        }
+        
+        body.page.contact.new .hero-banner img {
+            min-height: 416px;
+            object-fit: cover;
+            object-position: 80% 100%;
+        }
+        body.page.contact.new .hero-banner-main .hero-banner img.hyland_desktop_mobile {
+            display: none;
+        }
+        
+        body.page.contact.new .hero-banner-main .hero-banner img.hyland_banner_mobile {
+            display: block;
+        }
+        body.page.contact.new .hero-marquee .marquee-container {
+            display: none;
+        }
+        .contact_main .contact_main-inner .contact-main_div {
+                     min-height: 100px;
+        }
+        body.contact.new .hero-banner-main {
+            padding-left: 19px;
+            padding-right: 19px;
+        }
+        
+}

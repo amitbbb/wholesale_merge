@@ -1,0 +1,60 @@
+/* global */
+h1 {
+  font-family: Gotham;
+  font-weight: 600;
+  letter-spacing: unset;
+  font-size: 80px;
+  line-height: 1.5;
+}
+
+h2 {
+  font-family: Gotham;
+  font-weight: 600;
+  letter-spacing: unset;
+  font-size: 42px;
+  line-height: 1.5;
+}
+
+
+.hylands-label {
+  background-color: #FFE37B;
+  border-radius: 50px;
+  color: rgba(27, 67, 136, 1);
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: Gotham;
+  padding: 2rem;
+}
+.hyland-group-label .hylands-label {
+  display: inline-block;
+  padding: 7.5px 15.3px;
+  font-size: 10px;
+}
+@media screen and (max-width: 767px) {
+  .hyland-group-label {
+    text-align: center;
+  }
+}
+
+/* global landing pages */
+.kids-section-links {
+  margin-top: 40px;
+}
+
+/* baby landing page */
+#s-1bcb8987-6c40-4c3d-8044-59d39dda2b60 {
+  
+}
+
+#s-3e006153-1d7a-40d9-b645-ce579fc3a604 img.shogun-image {
+  width: 900px;
+  height: 600px;
+  max-height: unset;
+  max-width: 100%;
+}
+
+/* homepage */
+#s-131b0479-5e18-46fa-ac0a-3521162ef640 img.shogun-image {
+  height: 800px;
+  object-fit: cover;
+}

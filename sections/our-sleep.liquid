@@ -1,0 +1,59 @@
+{% if section.settings.sec_head != blank %}
+<h2>{{section.settings.sec_head}}</h2>
+    <div class="c-love-cards">
+      {% for block in section.blocks %}
+      <div class="c-love-wrap">
+        <h3>{{ block.settings.card_head }}</h3>
+        <img src="{{ block.settings.star_img | img_url: 'master'}}" alt="{{block.settings.card_head}}"/>
+        <p class="card_text">{{ block.settings.card_text }}</p>
+        <p class="cust_name">{{ block.settings.cust_name }}</p>
+      </div>
+      {% endfor %}
+    </div>
+{% endif %}
+{% schema %}
+{
+  "name": "Our Sleep",
+  "class": "our-sleep",
+  "settings": [
+  {
+    "type": "text",
+    "id": "sec_head",
+    "label": "Heading"
+  }
+  ] ,
+  "blocks": [
+  {
+	"type": "card",
+	"name": "Customers Love Card",
+	"settings": [
+        {
+          "type": "text",
+          "id": "card_head",
+          "label": "Heading"
+        },
+        {
+          "type": "image_picker",
+          "id": "star_img",
+          "label": "Star Image"
+        },
+        {
+          "type": "text",
+          "id": "card_text",
+          "label": "Card Text"
+        },
+        {
+          "type": "text",
+          "id": "cust_name",
+          "label": "Customer Name"
+        }
+      ]
+  }
+  ] ,
+  "presets": [
+  {
+    "name": "Our Sleep"
+  }
+  ]
+}
+{% endschema %}
